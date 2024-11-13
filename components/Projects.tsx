@@ -12,20 +12,20 @@ const Projects: React.FC<{}> = () => {
         EXPLORE NOW
       </p>
       <div className=" container mx-auto 2xl  ">
-        <div className="flex-col flex md:flex-row  mt-7">
+        <div className="flex-col flex md:flex-row flex-wrap mt-7">
           <Link
             href="https://github.com/ahmzakif/TFLite2-Driver-Drowsiness-Detection"
             rel="noopener noreferrer"
             target="_blank"
-            className="z-[1]"
+            className="z-[1] sm:w-[50%]"
           >
             <div className="flex-row flex mb-5">
               <Image
                 src="/stayAwakeProject.png"
-                height={150}
+                height={99.01}
                 width={150}
                 alt="Ahmad Zaki Firdaus - AI Project"
-                className="rounded-lg"
+                className="rounded-lg h-[99.01px] w-[150px]"
               />
               <div className="p-3">
                 <p className="text-white font-semibold text-xl">StayAwake</p>
@@ -40,15 +40,15 @@ const Projects: React.FC<{}> = () => {
             href="https://www.zonafarm.site/"
             rel="noopener noreferrer"
             target="_blank"
-            className="z-[1]"
+            className="z-[1] sm:w-[50%]"
           >
             <div className="flex-row flex mb-5">
               <Image
                 src="/ZonaFarmProject.png"
-                height={150}
+                height={99.01}
                 width={150}
                 alt="Ahmad Zaki Firdaus - AI Project"
-                className="rounded-lg"
+                className="rounded-lg h-[99.01px] w-[150px]"
               />
               <div className="p-3">
                 <p className="text-white font-semibold text-xl">Zona Farm</p>
@@ -65,15 +65,15 @@ const Projects: React.FC<{}> = () => {
             href="https://gamaforce.wg.ugm.ac.id/khageswara/khageswara-flight-controller/"
             rel="noopener noreferrer"
             target="_blank"
-            className="z-[1]"
+            className="z-[1] sm:w-[50%]"
           >
             <div className="flex-row flex mb-5">
               <Image
                 src="/GamaforceProject.png"
-                height={150}
+                height={99.01}
                 width={150}
                 alt="Ahmad Zaki Firdaus - IoT Project"
-                className="rounded-lg"
+                className="rounded-lg h-[99.01px] w-[150px]"
               />
               <div className=" p-3 ">
                 <p className="text-white font-semibold text-xl">
@@ -90,15 +90,15 @@ const Projects: React.FC<{}> = () => {
             href="https://cloud.wg.ugm.ac.id/category/g-connect/"
             rel="noopener noreferrer"
             target="_blank"
-            className="z-[1]"
+            className="z-[1] sm:w-[50%]"
           >
             <div className="flex-row flex mb-5">
               <Image
                 src="/GConnectProject.png"
-                height={150}
+                height={99.01}
                 width={150}
                 alt="Ahmad Zaki Firdaus - IoT Project"
-                className="rounded-lg"
+                className="rounded-lg h-[99.01px] w-[150px]"
               />
               <div className="p-3 ">
                 <p className="text-white font-semibold text-xl">G-Connect</p>
