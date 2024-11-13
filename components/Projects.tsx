@@ -53,8 +53,8 @@ const Projects: React.FC<{}> = () => {
               <div className="p-3">
                 <p className="text-white font-semibold text-xl">Zona Farm</p>
                 <p className="text-gray-500 text-[10px]">
-                Developed an image classification system for analyzing chicken health, 
-                enabling accurate condition monitoring in poultry farming.
+                Developed an image classification system to monitor 
+                chicken health, enhancing accuracy in poultry farming.
                 </p>
               </div>
             </div>
