@@ -12,11 +12,7 @@ const Navbar: React.FC<{}> = () => {
   return (
     <div className="w-full h-[65px] bg-['#111'] fixed backdrop-blur-sm z-50 px-4 sm:px-10">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto">
-        <a
-          title="ahmzakif logo"
-          href="/"
-          className="h-30 w-30 flex flex-row items-center"
-        >
+        <a title="ahmzakif logo" href="/" className="h-30 w-30 flex flex-row items-center">
           <Image
             src="/Logo.svg"
             alt="Ahmad Zaki Firdaus - Developer"
@@ -29,48 +25,33 @@ const Navbar: React.FC<{}> = () => {
 
         {/* Desktop Navigation */}
         <ul
-          className={`mt-4 flex flex-col items-start text-sm opacity-0 md:opacity-100 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-4 md:border-0 transition-all duration-300 ${
-            isMenuOpen ? "opacity-100 mt-10" : "opacity-0 md:opacity-100"
-          } ${
-            isMenuOpen ? "right-0 absolute top-10" : "absolute right-[-100%] top-0"
-          } md:static md:flex-row md:space-x-4`}
+          className="hidden md:flex flex-row items-center space-x-4 md:space-x-4"
           id="navbar-default"
         >
           <li>
-            <Link
-              className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              href="/#about"
-            >
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#about">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
             </Link>
           </li>
           <li>
-            <Link
-              className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              href="/#skills"
-            >
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div>
             </Link>
           </li>
           <li>
-            <Link
-              className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              href="/#experience"
-            >
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div>
             </Link>
           </li>
           <li>
-            <Link
-              className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              href="/#projects"
-            >
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div>
             </Link>
           </li>
         </ul>
 
-        <div className="flex flex-row gap-5">
+        {/* Desktop Contact Button */}
+        <div className="hidden md:flex flex-row gap-5">
           <div
             onClick={() => window.open("mailto:ahmzakif@gmail.com")}
             className="z-[1] bg-transparent padding-10 cursor-pointer bg-black hover:bg-[#2E2E2E] rounded-xl text-white py-2 px-5"
@@ -100,6 +81,43 @@ const Navbar: React.FC<{}> = () => {
           </svg>
         </button>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMenuOpen && (
+        <ul
+          className="md:hidden absolute top-16 right-0 bg-transparent z-50 w-[180px] py-5 px-4" // Transparent background
+        >
+          <li>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#about">
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
+            </Link>
+          </li>
+          <li>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#skills">
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div>
+            </Link>
+          </li>
+          <li>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#experience">
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div>
+            </Link>
+          </li>
+          <li>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#projects">
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div>
+            </Link>
+          </li>
+          {/* Contact Button Inside Hamburger Menu for Mobile */}
+          <li>
+            <div
+              onClick={() => window.open("mailto:ahmzakif@gmail.com")}
+              className="z-[1] bg-transparent padding-10 cursor-pointer bg-black hover:bg-[#2E2E2E] rounded-xl text-white py-2 px-5"
+            >
+              Contact
+            </div>
+          </li>
+        </ul>
+      )}
     </div>
   );
 };
