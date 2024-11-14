@@ -85,7 +85,7 @@ const Navbar: React.FC<{}> = () => {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <ul
-          className="md:hidden absolute top-16 right-0 bg-transparent z-50 w-[180px] py-5 px-4" // Transparent background
+          className="md:hidden absolute top-16 right-0 bg-transparent z-50 w-[180px] py-5 px-4 text-right"
         >
           <li>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#about">
