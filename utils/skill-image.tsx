@@ -25,50 +25,50 @@ import typescript from '../public/skills/typescript.svg';
 export const skillsImage = (skill: string): StaticImageData => {
     const skillID = skill.toLowerCase();
 
-  switch (skillID) {
-    case 'git':
-      return git;
-    case 'html':
-      return html;
-    case 'css':
-      return css;
-    case 'javascript':
-      return javascript;
-    case 'typescript':
-      return typescript;
-    case 'react':
-      return react;
-    case 'nextjs':
-      return nextjs;
-    case 'tailwind':
-      return tailwind;
-    case 'mongodb':
-      return mongodb;
-    case 'cpp':
-      return cpp;
-    case 'python':
-      return python;
-    case 'matlab':
-      return matlab;
-    case 'numpy':
-      return numpy;
-    case 'pandas':
-      return pandas;
-    case 'scikitlearn':
-      return scikitlearn;
-    case 'tensorflow':
-      return tensorflow;
-    case 'pytorch':
-      return pytorch;
-    case 'keras':
-      return keras;
-    case 'opencv':
-      return opencv;
-    case 'arduino':
-      return arduino;
-    case 'raspberrypi':
-      return raspberrypi;
-    default:
-        throw new Error(`Skill image not found for: ${skill}`);
-  }
+    switch (skillID) {
+        case 'git':
+            return git;
+        case 'html':
+            return html;
+        case 'css':
+            return css;
+        case 'javascript':
+            return javascript;
+        case 'typescript':
+            return typescript;
+        case 'react':
+            return react;
+        case 'nextjs':
+            return nextjs;
+        case 'tailwind':
+            return tailwind;
+        case 'mongodb':
+            return mongodb;
+        case 'cpp':
+            return cpp;
+        case 'python':
+            return python;
+        case 'matlab':
+            return matlab;
+        case 'numpy':
+            return numpy;
+        case 'pandas':
+            return pandas;
+        case 'scikitlearn':
+            return scikitlearn;
+        case 'tensorflow':
+            return tensorflow;
+        case 'pytorch':
+            return pytorch;
+        case 'keras':
+            return keras;
+        case 'opencv':
+            return opencv;
+        case 'arduino':
+            return arduino;
+        case 'raspberrypi':
+            return raspberrypi;
+        default:
+            throw new Error(`Skill image not found for: ${skill}`);
+    }
 };
