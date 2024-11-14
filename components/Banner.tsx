@@ -45,7 +45,7 @@ const Banner: React.FC<{}> = () => {
             onClick={() => window?.open('/docs/Ahmad_Zaki_Firdaus-Resume.pdf', '_blank')}
             className=" z-[1]     padding-20  hover:bg-white rounded-3xl  text-white font-semibold hover:text-black py-3 px-10  border-[0.1px] border-white hover:border-transparent "
           >
-            Download CV
+            Get Resume
           </button>
         </div>
       </div>
