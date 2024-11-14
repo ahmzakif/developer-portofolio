@@ -28,23 +28,25 @@ const Experience: React.FC<{}> = () => {
           </p>
         </div>
 
-        <p className="text-gray-300 pt-5">
-          During my participation in the prestigious Bangkit Academy, 
-          a career readiness program designed by Google, Tokopedia, Gojek, and Traveloka, 
-          I honed my skills as a Machine Learning Engineer. I collaborated with a 
-          cross-functional team consisting of machine learning engineers, cloud computing 
-          engineers, and a mobile developer to create an impactful capstone project.
-
+        <div className="text-gray-300 pt-5" style={{ textAlign: "justify" }}>
+          <p style={{ textIndent: "2em" }}>
+            During my participation in the prestigious Bangkit Academy, 
+            a career readiness program designed by Google, Tokopedia, Gojek, and Traveloka, 
+            I honed my skills as a Machine Learning Engineer. I collaborated with a 
+            cross-functional team consisting of machine learning engineers, cloud computing 
+            engineers, and a mobile developer to create an impactful capstone project.
+          </p>
           <br />
-          <br />
-          Our project focused on developing an Android-based application for real-time 
-          monitoring of drivers. Using the Single Shot Detector (SSD) MobileNetV2 method, 
-          we implemented a system capable of detecting driver distractions or abnormal 
-          conditions such as fatigue and drowsiness. This experience not only enhanced my 
-          technical expertise in deep learning and image processing but also strengthened 
-          my leadership skills as I successfully guided the team to achieve our project objectives.
+          <p style={{ textIndent: "2em" }}>
+            Our project focused on developing an Android-based application for real-time 
+            monitoring of drivers. Using the Single Shot Detector (SSD) MobileNetV2 method, 
+            we implemented a system capable of detecting driver distractions or abnormal 
+            conditions such as fatigue and drowsiness. This experience not only enhanced my 
+            technical expertise in deep learning and image processing but also strengthened 
+            my leadership skills as I successfully guided the team to achieve our project objectives.
+          </p>
+        </div>
 
-        </p>
         <div className="flex-col flex sm:flex-row ">
           <div className="bg-transparent  mt-5 mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
             Python
