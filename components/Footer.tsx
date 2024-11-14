@@ -30,7 +30,7 @@ const Footer: React.FC<{}> = () => {
         })}
       </div>
       <p className="text-gray-300 text-center text-sm">
-        Created with ❤️ by ahmzakif
+      © 2024 | Developed by <Link target="_blank" href="https://www.linkedin.com/in/ahmzakif/" className="text-transparent font-light pb-5  bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500">ahmzakif</Link>
       </p>
     </div>
   );

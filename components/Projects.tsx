@@ -22,10 +22,10 @@ const Projects: React.FC<{}> = () => {
             <div className="flex-row flex mb-5">
               <Image
                 src="/stayAwakeProject.png"
-                height={99.01}
+                height={99}
                 width={150}
                 alt="Ahmad Zaki Firdaus - AI Project"
-                className="rounded-lg h-[99.01px] w-[150px]"
+                className="rounded-lg h-[99px] w-[150px]"
               />
               <div className="p-3">
                 <p className="text-white font-semibold text-xl">StayAwake</p>
@@ -45,10 +45,10 @@ const Projects: React.FC<{}> = () => {
             <div className="flex-row flex mb-5">
               <Image
                 src="/ZonaFarmProject.png"
-                height={99.01}
+                height={99}
                 width={150}
                 alt="Ahmad Zaki Firdaus - AI Project"
-                className="rounded-lg h-[99.01px] w-[150px]"
+                className="rounded-lg h-[99px] w-[150px]"
               />
               <div className="p-3">
                 <p className="text-white font-semibold text-xl">Zona Farm</p>
@@ -70,10 +70,10 @@ const Projects: React.FC<{}> = () => {
             <div className="flex-row flex mb-5">
               <Image
                 src="/GamaforceProject.png"
-                height={99.01}
+                height={99}
                 width={150}
                 alt="Ahmad Zaki Firdaus - IoT Project"
-                className="rounded-lg h-[99.01px] w-[150px]"
+                className="rounded-lg h-[99px] w-[150px]"
               />
               <div className=" p-3 ">
                 <p className="text-white font-semibold text-xl">
@@ -95,10 +95,10 @@ const Projects: React.FC<{}> = () => {
             <div className="flex-row flex mb-5">
               <Image
                 src="/GConnectProject.png"
-                height={99.01}
+                height={99}
                 width={150}
                 alt="Ahmad Zaki Firdaus - IoT Project"
-                className="rounded-lg h-[99.01px] w-[150px]"
+                className="rounded-lg h-[99px] w-[150px]"
               />
               <div className="p-3 ">
                 <p className="text-white font-semibold text-xl">G-Connect</p>
