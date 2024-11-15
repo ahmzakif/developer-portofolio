@@ -62,7 +62,7 @@ const Projects: React.FC<{}> = () => {
         </div>
         <div className="flex-col flex md:flex-row ">
           <Link
-            href="https://gamaforce.wg.ugm.ac.id/khageswara/khageswara-flight-controller/"
+            href="https://www.metrotvnews.com/play/b2lCren7-gamaforce-kembali-juara-umum-di-krti-2023"
             rel="noopener noreferrer"
             target="_blank"
             className="z-[1] sm:w-[50%]"
