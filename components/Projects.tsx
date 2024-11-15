@@ -14,7 +14,7 @@ const Projects: React.FC<{}> = () => {
       <div className=" container mx-auto 2xl  ">
         <div className="flex-col flex md:flex-row flex-wrap mt-7">
           <Link
-            href="https://github.com/ahmzakif/TFLite2-Driver-Drowsiness-Detection"
+            href="https://youtu.be/nZXAyHOcGLk"
             rel="noopener noreferrer"
             target="_blank"
             className="z-[1] sm:w-[50%]"
