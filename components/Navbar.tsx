@@ -79,7 +79,7 @@ const Navbar: React.FC<{}> = () => {
         <div className="hidden md:flex flex-row gap-5">
           <div
             onClick={() => window.open("mailto:ahmzakif@gmail.com")}
-            className="z-[1] bg-[#2E2E2E] padding-10 cursor-pointer hover:bg-white hover:text-black rounded-xl text-white py-2 px-5"
+            className="z-[1] bg-[#2E2E2E] padding-10 cursor-pointer hover:bg-white hover:text-black rounded-xl text-white py-2 px-5 alive"
           >
             Contact
           </div>

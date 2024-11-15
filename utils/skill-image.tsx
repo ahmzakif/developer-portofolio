@@ -9,6 +9,7 @@ import keras from '../public/skills/keras.svg';
 import matlab from '../public/skills/matlab.svg';
 import mongodb from '../public/skills/mongodb.svg';
 import nextjs from '../public/skills/nextjs.svg';
+import nodejs from '../public/skills/nodejs.svg';
 import numpy from '../public/skills/numpy.svg';
 import opencv from '../public/skills/opencv.svg';
 import pandas from '../public/skills/pandas.svg';
@@ -20,6 +21,7 @@ import scikitlearn from '../public/skills/scikitlearn.svg';
 import tailwind from '../public/skills/tailwind.svg';
 import tensorflow from '../public/skills/tensorflow.svg';
 import typescript from '../public/skills/typescript.svg';
+import yolo from '../public/skills/yolo.svg';
 
 
 export const skillsImage = (skill: string): StaticImageData => {
@@ -40,6 +42,8 @@ export const skillsImage = (skill: string): StaticImageData => {
             return react;
         case 'nextjs':
             return nextjs;
+        case 'nodejs':
+            return nodejs;
         case 'tailwind':
             return tailwind;
         case 'mongodb':
@@ -68,6 +72,8 @@ export const skillsImage = (skill: string): StaticImageData => {
             return arduino;
         case 'raspberrypi':
             return raspberrypi;
+        case 'yolo':
+            return yolo;
         default:
             throw new Error(`Skill image not found for: ${skill}`);
     }

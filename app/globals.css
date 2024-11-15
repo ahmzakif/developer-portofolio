@@ -42,3 +42,19 @@
 .menu-item:nth-child(5) {
   animation-delay: 0.5s;
 }
+
+.alive {
+  box-shadow: 0 10px 0 #1F1F1F;
+  transition: all 0.3s ease;
+}
+.alive:focus {
+  border: none;
+  outline: none;
+}
+.alive:active {
+  box-shadow: 0 5px 0 #1F1F1F;
+  transform: translateY(5px);
+}
+.alive:hover {
+  box-shadow: 0 10px 0 #DCDCDC;
+}
