@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <a title="ahmzakif logo" href="/" className="h-30 w-30 flex flex-row items-center">
           <Image
-            src="/Logo.svg"
+            src="/images/Logo.svg"
             alt="Ahmad Zaki Firdaus - Developer"
             width={100}
             height={100}

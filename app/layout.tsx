@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Ahmad Zaki Firdaus - AI | ML | DL - Developer Portofolio",
     description:
       "AI & IoT Developer from Indonesia with 2+ years of expertise. AI Engineer. Specializing image classification, object detection and IoT technologies.",
-    images: "/OpenGraph.png",
+    images: "/images/OpenGraph.png",
   },
   alternates: {
     canonical: "https://ahmzakif.vercel.app/",

@@ -14,7 +14,7 @@ const Experience: React.FC<{}> = () => {
         <div className="md:flex md:flex-row md:justify-between pt-5">
           <div className="flex items-center gap-3">
             <Image
-              src={"/Bangkit.svg"}
+              src={"/images/Bangkit.svg"}
               height={30}
               width={30}
               alt={"Ahmad Zaki Firdaus - ML Experience"}
