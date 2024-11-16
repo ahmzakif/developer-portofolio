@@ -13,7 +13,7 @@ Welcome to my **Developer Portfolio** repository! 🚀 This project is built usi
 - [📜 Table of Contents](#-table-of-contents)
 - [🌐 Demo](#-demo)
 - [✨ Features](#-features)
-- [Fonts ✍🏻](#fonts-)
+- [✍🏻 Fonts](#-fonts)
 - [⬇️ Installation](#️-installation)
 - [🛠️ Project Structure](#️-project-structure)
 - [🏛 Licenses](#-licenses)
@@ -35,7 +35,7 @@ Check out the live version of my portfolio: [Live Preview](https://ahmzakif.verc
 
 ---
 
-# Fonts ✍🏻
+# ✍🏻 Fonts
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
