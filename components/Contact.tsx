@@ -45,7 +45,7 @@ export function Contact() {
         <h1 className="text-6xl font-semibold">CONTACT</h1>
       </div>
 
-      <div className="w-full flex flex-col md:flex-row justify-between items-start md:space-x-10">
+      <div className="max-w-[900px] flex flex-col md:flex-row justify-between items-start md:space-x-10">
         <div className="md:w-1/2 flex flex-col items-start mb-10 md:mb-0">
           <h2 className="text-4xl font-semibold text-gradient mb-5">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500">Let's talk</span>
