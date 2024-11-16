@@ -110,7 +110,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <ul className="md:hidden absolute top-16 right-0 bg-gradient-to-r from-gray-800/75 to-transparent rounded-[1.1rem] z-50 w-[140px] py-5 px-4 text-center">
+        <ul className="md:hidden absolute top-16 right-0 bg-gradient-to-r from-gray-900/100 to-transparent rounded-[1.1rem] z-50 w-[140px] py-5 px-4 text-center">
           <li className="menu-item">
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#about">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
