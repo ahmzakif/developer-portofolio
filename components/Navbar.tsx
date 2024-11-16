@@ -77,12 +77,12 @@ const Navbar: React.FC<{}> = () => {
 
         {/* Desktop Contact Button */}
         <div className="hidden md:flex flex-row gap-5">
-          <div
-            onClick={() => window.open("mailto:ahmzakif@gmail.com")}
+          <a
+            href="/#contact"
             className="z-[1] bg-[#2E2E2E] padding-10 cursor-pointer hover:bg-white hover:text-black rounded-xl text-white py-2 px-5 alive"
           >
             Contact
-          </div>
+          </a>
         </div>
 
         {/* Mobile Hamburger Menu */}
@@ -137,7 +137,7 @@ const Navbar: React.FC<{}> = () => {
           {/* Contact Button Inside Hamburger Menu for Mobile */}
           <li className="menu-item">
             <Link
-              href="mailto:ahmzakif@gmail.com"
+              href="/#contact"
               className="block px-4 py-2 no-underline outline-none hover:no-underline text-white"
             >
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
