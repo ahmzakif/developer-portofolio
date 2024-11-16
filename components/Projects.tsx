@@ -21,7 +21,7 @@ const Projects: React.FC<{}> = () => {
           >
             <div className="flex-row flex mb-5">
               <Image
-                src="/stayAwakeProject.png"
+                src="/project/stayAwakeProject.png"
                 height={99}
                 width={150}
                 alt="Ahmad Zaki Firdaus - AI Project"
@@ -44,7 +44,7 @@ const Projects: React.FC<{}> = () => {
           >
             <div className="flex-row flex mb-5">
               <Image
-                src="/ZonaFarmProject.png"
+                src="/project/ZonaFarmProject.png"
                 height={99}
                 width={150}
                 alt="Ahmad Zaki Firdaus - AI Project"
@@ -69,7 +69,7 @@ const Projects: React.FC<{}> = () => {
           >
             <div className="flex-row flex mb-5">
               <Image
-                src="/GamaforceProject.png"
+                src="/project/GamaforceProject.png"
                 height={99}
                 width={150}
                 alt="Ahmad Zaki Firdaus - IoT Project"
@@ -94,7 +94,7 @@ const Projects: React.FC<{}> = () => {
           >
             <div className="flex-row flex mb-5">
               <Image
-                src="/GConnectProject.png"
+                src="/project/GConnectProject.png"
                 height={99}
                 width={150}
                 alt="Ahmad Zaki Firdaus - IoT Project"
