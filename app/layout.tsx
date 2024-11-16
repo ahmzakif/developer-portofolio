@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Ahmad Zaki Firdaus | AI Engineer",
     description:
       "AI & IoT Developer from Indonesia with 2+ years of expertise. AI Engineer. Specializing image classification, object detection and IoT technologies.",
-    images: "/OpenGraph.jpg",
+    images: "/OpenGraph.png",
   },
   alternates: {
     canonical: "https://ahmzakif.com/",
@@ -77,8 +77,6 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#111] overflow-y-scroll overflow-x-hidden`}
       >
-        {/* <SpeedInsights />
-        <Analytics /> */}
         <StarsCanvas />
         <Navbar />
         {children}
