@@ -1,5 +1,7 @@
 # 🚀 Developer Portfolio 
 
+[![Site preview](/public/portfolio-thumbnail.png)](https://ahmzakif.vercel.app/)
+
 Welcome to my **Developer Portfolio** repository! 🚀 This project is built using [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com) to showcase a responsive and modern portfolio design.
 
 ---
