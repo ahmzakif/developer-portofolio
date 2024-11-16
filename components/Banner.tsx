@@ -28,7 +28,7 @@ const Banner: React.FC<{}> = () => {
             </span>
           </p>
           <Image
-            src="/popcorn.gif"
+            src="/icon/popcorn.gif"
             height={50}
             width={50}
             alt="Ahmad Zaki Firdaus"
