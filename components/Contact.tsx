@@ -62,7 +62,7 @@ export function Contact() {
           </div>
           <div className="z-[1] flex items-center mb-4">
             <FaPhone className="text-xl mr-3" />
-            <Link href={"wa.me/6282123009494"}>
+            <Link href={"https://wa.me/6282123009494"}>
               <p className="text-gray-400 hover:text-blue-500">+62 821-2300-9494</p>
             </Link>
           </div>
