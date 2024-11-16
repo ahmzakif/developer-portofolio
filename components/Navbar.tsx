@@ -2,16 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
-const Navbar: React.FC<{}> = () => {
+const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (typeof window !== "undefined") {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY) {
@@ -22,7 +22,7 @@ const Navbar: React.FC<{}> = () => {
       }
       setLastScrollY(currentScrollY);
     }
-  };
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -31,15 +31,16 @@ const Navbar: React.FC<{}> = () => {
         window.removeEventListener("scroll", handleScroll);
       };
     }
-  }, [lastScrollY]);
+  }, [handleScroll]);
 
   return (
     <div
-      className={`w-full h-[65px] bg-['#111'] fixed backdrop-blur-sm z-50 px-4 sm:px-10 transition-transform duration-300 ${
+      className={`w-full h-[65px] bg-[#111] fixed backdrop-blur-sm z-50 px-4 sm:px-10 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="w-full h-full flex flex-row items-center justify-between m-auto">
+        {/* Logo */}
         <a title="ahmzakif logo" href="/" className="h-30 w-30 flex flex-row items-center">
           <Image
             src="/Logo.svg"
@@ -109,10 +110,7 @@ const Navbar: React.FC<{}> = () => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <ul
-          className="md:hidden absolute top-16 right-0 bg-transparent z-50 w-[180px] py-5 px-4 text-right"
-        >
-          
+        <ul className="md:hidden absolute top-16 right-0 bg-transparent z-50 w-[180px] py-5 px-4 text-right">
           <li className="menu-item">
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#about">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
@@ -133,22 +131,16 @@ const Navbar: React.FC<{}> = () => {
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div>
             </Link>
           </li>
-
-          {/* Contact Button Inside Hamburger Menu for Mobile */}
           <li className="menu-item">
             <Link
               href="/#contact"
               className="block px-4 py-2 no-underline outline-none hover:no-underline text-white"
             >
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">
-                CONTACT
-              </div>
+              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">CONTACT</div>
             </Link>
           </li>
         </ul>
       )}
-
-      
     </div>
   );
 };

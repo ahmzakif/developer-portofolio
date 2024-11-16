@@ -48,10 +48,10 @@ export function Contact() {
       <div className="max-w-[900px] flex flex-col md:flex-row justify-between items-start md:space-x-10">
         <div className="md:w-1/2 flex flex-col items-start mb-10 md:mb-0">
           <h2 className="text-4xl font-semibold text-gradient mb-5">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500">Let's talk</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500">Let&apos;s talk</span>
           </h2>
           <p className="mb-5 text-gray-400">
-            I'm currently available to take on new projects, so feel free to send me a message about anything that you want me to work on. You can contact anytime.
+            I&apos;m currently available to take on new projects, so feel free to send me a message about anything that you want me to work on. You can contact anytime.
           </p>
           <div className="flex items-center mb-4">
             <FaEnvelope className="text-xl mr-3" />
