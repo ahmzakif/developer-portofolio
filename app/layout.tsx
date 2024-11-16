@@ -7,8 +7,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ahmzakif.com/"),
-  title: "Ahmad Zaki Firdaus | AI Engineer",
+  metadataBase: new URL("https://ahmzakif.vercel.app/"),
+  title: "Ahmad Zaki Firdaus - AI | ML | DL - Developer Portofolio",
   description:
     "Developer Portfolio of Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
   keywords: [
@@ -17,21 +17,20 @@ export const metadata: Metadata = {
     "Developer Portflio",
     "Ahmad Zaki Firdaus",
     "Zaki",
-    "AhmadZaki",
     "ahmzakif",
-    "ahmad_zaki",
     "Next.js",
+    "React",
     "TensorFlow",
     "PyTorch",
   ],
   openGraph: {
-    title: "Ahmad Zaki Firdaus | AI Engineer",
+    title: "Ahmad Zaki Firdaus - AI | ML | DL - Developer Portofolio",
     description:
       "AI & IoT Developer from Indonesia with 2+ years of expertise. AI Engineer. Specializing image classification, object detection and IoT technologies.",
     images: "/OpenGraph.png",
   },
   alternates: {
-    canonical: "https://ahmzakif.com/",
+    canonical: "https://ahmzakif.vercel.app/",
   },
 };
 export default function RootLayout({
@@ -50,7 +49,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Ahmad Zaki Firdaus",
               jobTitle: "AI Engineer",
-              url: "https://ahmzakif.com",
+              url: "https://ahmzakif.vercel.app/",
               sameAs: [
                 "https://www.linkedin.com/in/ahmzakif/",
                 "https://github.com/ahmzakif",
