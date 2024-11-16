@@ -1,5 +1,6 @@
-"use client"; // Pastikan ini ada di bagian paling atas
+"use client";
 
+import Link from "next/link";
 import React, { useRef, useState } from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
@@ -53,17 +54,23 @@ export function Contact() {
           <p className="mb-5 text-gray-400">
             I&apos;m currently available to take on new projects, so feel free to send me a message about anything that you want me to work on. You can contact anytime.
           </p>
-          <div className="flex items-center mb-4">
+          <div className="z-[1] flex items-center mb-4">
             <FaEnvelope className="text-xl mr-3" />
-            <p className="text-gray-400">ahmzakif@gmail.com</p>
+            <Link href={"mailto:ahmzakif@gmail.com"}>
+              <p className="text-gray-400 hover:text-blue-500">ahmzakif@gmail.com</p>
+            </Link>
           </div>
-          <div className="flex items-center mb-4">
+          <div className="z-[1] flex items-center mb-4">
             <FaPhone className="text-xl mr-3" />
-            <p className="text-gray-400">+62 821-2300-9494</p>
+            <Link href={"wa.me/6282123009494"}>
+              <p className="text-gray-400 hover:text-blue-500">+62 821-2300-9494</p>
+            </Link>
           </div>
-          <div className="flex items-center mb-4">
+          <div className="z-[1] flex items-center mb-4">
             <FaMapMarkerAlt className="text-xl mr-3" />
-            <p className="text-gray-400">Jakarta, Indonesia</p>
+            <Link href={"https://www.google.com/maps/@-6.2146200,106.8451300,11z"}>
+              <p className="text-gray-400 hover:text-blue-500">Jakarta, Indonesia</p>
+            </Link>
           </div>
         </div>
 
