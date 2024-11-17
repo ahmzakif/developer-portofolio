@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import React, { useRef, useState } from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
@@ -52,25 +51,21 @@ export function Contact() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500">Let&apos;s talk</span>
           </h2>
           <p className="mb-5 text-gray-400">
-            I&apos;m currently available to take on new projects, so feel free to send me a message about anything that you want me to work on. You can contact anytime.
+            I&apos;m currently available to take on new projects, 
+            so feel free to send me a message about anything that 
+            you want me to work on. You can contact anytime, and share your thoughts.
           </p>
           <div className="z-[1] flex items-center mb-4">
             <FaEnvelope className="text-xl mr-3" />
-            <Link href={"mailto:ahmzakif@gmail.com"}>
-              <p className="text-gray-400 hover:text-blue-500">ahmzakif@gmail.com</p>
-            </Link>
+            <p className="text-gray-400 hover:text-blue-500">ahmzakif@gmail.com</p>
           </div>
           <div className="z-[1] flex items-center mb-4">
             <FaPhone className="text-xl mr-3" />
-            <Link href={"https://wa.me/6282123009494"}>
-              <p className="text-gray-400 hover:text-blue-500">+62 821-2300-9494</p>
-            </Link>
+            <p className="text-gray-400 hover:text-blue-500">+62 821-2300-9494</p>
           </div>
           <div className="z-[1] flex items-center mb-4">
             <FaMapMarkerAlt className="text-xl mr-3" />
-            <Link href={"https://www.google.com/maps/@-6.2146200,106.8451300,11z"}>
-              <p className="text-gray-400 hover:text-blue-500">Jakarta, Indonesia</p>
-            </Link>
+            <p className="text-gray-400 hover:text-blue-500">Jakarta, Indonesia</p>
           </div>
         </div>
 
@@ -83,7 +78,7 @@ export function Contact() {
               <p className="text-red-500 text-center">{error}</p>
             )}
             <label className="text-gray-300">
-              Your Name
+              Name
               <input
                 type="text"
                 name="name"
@@ -93,7 +88,7 @@ export function Contact() {
               />
             </label>
             <label className="text-gray-300">
-              Your Email
+              Email
               <input
                 type="email"
                 name="email"
@@ -103,7 +98,7 @@ export function Contact() {
               />
             </label>
             <label className="text-gray-300">
-              Write your message here
+              Message here
               <textarea
                 name="message"
                 placeholder="Enter your message"
