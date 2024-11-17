@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
 
 const Navbar: React.FC = () => {
@@ -16,7 +15,7 @@ const Navbar: React.FC = () => {
       setTimeout(() => {
         setIsMenuOpen(false); 
         setIsAnimating(false); 
-      }, 300); 
+      }, 800); 
     } else {
       setIsMenuOpen(true); 
     }
@@ -44,29 +43,20 @@ const Navbar: React.FC = () => {
     }
   }, [handleScroll]);
 
-  useEffect(() => {
-    const handleAnchorClick = (event: MouseEvent) => {
-      const target = event.target as HTMLAnchorElement;
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const offsetTop = element.offsetTop;
   
-      // Pastikan target adalah anchor dan memiliki atribut href
-      if (target.tagName === "A" && target.getAttribute("href")?.startsWith("#")) {
-        event.preventDefault();
-        const href = target.getAttribute("href"); // Bisa menghasilkan null atau undefined
-        if (href) {
-          const id = href.substring(1); // Ambil ID setelah '#' jika href valid
-          const element = document.getElementById(id); // Cari elemen dengan ID tersebut
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" }); // Smooth scroll ke elemen target
-          }
-        }
-      }
-    };
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
   
-    document.addEventListener("click", handleAnchorClick);
-    return () => {
-      document.removeEventListener("click", handleAnchorClick);
-    };
-  }, []);
+      setIsMenuOpen(false);
+    }
+  };
   
 
   return (
@@ -91,24 +81,40 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex flex-row items-center space-x-4 md:space-x-4" id="navbar-default">
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#about">
+            <a
+              href="#about"
+              onClick={(e) => handleLinkClick(e, "about")}
+              className="block px-4 py-2 no-underline outline-none hover:no-underline"
+            >
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills">
+            <a
+              href="#skills"
+              onClick={(e) => handleLinkClick(e, "skills")}
+              className="block px-4 py-2 no-underline outline-none hover:no-underline"
+            >
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience">
+            <a
+              href="#experience"
+              onClick={(e) => handleLinkClick(e, "experience")}
+              className="block px-4 py-2 no-underline outline-none hover:no-underline"
+            >
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects">
+            <a
+              href="#projects"
+              onClick={(e) => handleLinkClick(e, "projects")}
+              className="block px-4 py-2 no-underline outline-none hover:no-underline"
+            >
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div>
-            </Link>
+            </a>
           </li>
         </ul>
 
@@ -116,6 +122,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex flex-row gap-5">
           <a
             href="/#contact"
+            onClick={(e) => handleLinkClick(e, "contact")}
             className="z-[1] bg-[#2E2E2E] padding-10 cursor-pointer hover:bg-white hover:text-black rounded-xl text-white py-2 px-5 alive"
           >
             Contact
@@ -151,32 +158,44 @@ const Navbar: React.FC = () => {
           }`}
         >
           <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#about">
+            <a 
+              href="#about"
+              onClick={(e) => handleLinkClick(e, "about")}
+              className="block px-4 py-2 no-underline outline-none hover:no-underline text-white">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
-            </Link>
+            </a>
           </li>
           <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#skills">
+            <a 
+              href="#skills" 
+              onClick={(e) => handleLinkClick(e, "skills")} 
+              className="block px-4 py-2 no-underline outline-none hover:no-underline text-white">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div>
-            </Link>
+            </a>
           </li>
           <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#experience">
+            <a 
+              href="#experience" onClick={(e) => handleLinkClick(e, "experience")} 
+              className="block px-4 py-2 no-underline outline-none hover:no-underline text-white">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div>
-            </Link>
+            </a>
           </li>
           <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#projects">
+            <a 
+              href="#projects" 
+              onClick={(e) => handleLinkClick(e, "projects")} 
+              className="block px-4 py-2 no-underline outline-none hover:no-underline text-white">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div>
-            </Link>
+            </a>
           </li>
           <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
-            <Link
+            <a
               href="/#contact"
+              onClick={(e) => handleLinkClick(e, "contact")}
               className="block px-4 py-2 no-underline outline-none hover:no-underline text-white"
             >
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">CONTACT</div>
-            </Link>
+            </a>
           </li>
         </ul>
       )}
