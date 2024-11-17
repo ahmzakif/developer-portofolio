@@ -6,10 +6,21 @@ import React, { useCallback, useEffect, useState } from "react";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const toggleMenu = () => {
+    if (isMenuOpen) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setIsMenuOpen(false); 
+        setIsAnimating(false); 
+      }, 300); 
+    } else {
+      setIsMenuOpen(true); 
+    }
+  };
 
   const handleScroll = useCallback(() => {
     if (typeof window !== "undefined") {
@@ -33,6 +44,31 @@ const Navbar: React.FC = () => {
     }
   }, [handleScroll]);
 
+  useEffect(() => {
+    const handleAnchorClick = (event: MouseEvent) => {
+      const target = event.target as HTMLAnchorElement;
+  
+      // Pastikan target adalah anchor dan memiliki atribut href
+      if (target.tagName === "A" && target.getAttribute("href")?.startsWith("#")) {
+        event.preventDefault();
+        const href = target.getAttribute("href"); // Bisa menghasilkan null atau undefined
+        if (href) {
+          const id = href.substring(1); // Ambil ID setelah '#' jika href valid
+          const element = document.getElementById(id); // Cari elemen dengan ID tersebut
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" }); // Smooth scroll ke elemen target
+          }
+        }
+      }
+    };
+  
+    document.addEventListener("click", handleAnchorClick);
+    return () => {
+      document.removeEventListener("click", handleAnchorClick);
+    };
+  }, []);
+  
+
   return (
     <div
       className={`w-full h-[65px] bg-[#111] fixed backdrop-blur-sm z-50 px-4 sm:px-10 transition-transform duration-300 ${
@@ -40,8 +76,8 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="w-full h-full flex flex-row items-center justify-between m-auto">
-        {/* Logo */}
-        <a title="ahmzakif logo" href="/" className="h-30 w-30 flex flex-row items-center">
+        
+        <a href="/" className="h-30 w-30 flex flex-row items-center">
           <Image
             src="/images/Logo.svg"
             alt="Ahmad Zaki Firdaus - Developer"
@@ -110,28 +146,31 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <ul className="md:hidden absolute top-16 right-0 bg-gradient-to-r from-gray-900/100 to-transparent rounded-[1.1rem] z-50 w-[140px] py-5 px-4 text-center">
-          <li className="menu-item">
+        <ul className={`md:hidden absolute top-16 right-0 bg-gradient-to-r from-gray-900/100 to-transparent rounded-[1.1rem] z-50 w-[140px] py-5 px-4 text-center ${
+          isAnimating ? "menu-item-exit" : ""
+          }`}
+        >
+          <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#about">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
             </Link>
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#skills">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div>
             </Link>
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#experience">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div>
             </Link>
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline text-white" href="/#projects">
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div>
             </Link>
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${isAnimating ? "menu-item-exit" : ""}`}>
             <Link
               href="/#contact"
               className="block px-4 py-2 no-underline outline-none hover:no-underline text-white"

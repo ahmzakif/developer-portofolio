@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  @apply scroll-smooth
+}
+
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -15,6 +19,17 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
 }
 
@@ -57,4 +72,9 @@
 }
 .alive:hover {
   box-shadow: 0 10px 0 #DCDCDC;
+}
+
+.menu-item-exit {
+  opacity: 0;
+  animation: slideOut 0.3s ease backwards;
 }
