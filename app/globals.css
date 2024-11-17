@@ -76,5 +76,5 @@ html {
 
 .menu-item-exit {
   opacity: 0;
-  animation: slideOut 0.3s ease backwards;
+  animation: slideOut 0.9s ease backwards;
 }
