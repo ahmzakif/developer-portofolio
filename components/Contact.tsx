@@ -66,7 +66,7 @@ export function Contact() {
       icon: Mail,
       label: "Email",
       value: "ahmzakif@gmail.com",
-      link: "mailto:ahmzakif@gmail.com"
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=ahmzakif@gmail.com"
     },
     {
       icon: Phone,
@@ -78,7 +78,7 @@ export function Contact() {
       icon: MapPin,
       label: "Location",
       value: "Jakarta, Indonesia",
-      link: "#"
+      link: "https://maps.google.com/?q=South Jakarta,Indonesia"
     }
   ];
 
@@ -160,6 +160,8 @@ export function Contact() {
                   <motion.a
                     key={index}
                     href={info.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-black/20 rounded-xl hover:bg-blue-500/10 hover:border-blue-500/30 border border-white/5 transition-all duration-300 group"
                     whileHover={{ x: 10 }}
                     initial={{ opacity: 0, x: -20 }}
@@ -285,10 +287,12 @@ export function Contact() {
 
               <div className="mt-6 text-center">
                 <a
-                  href="mailto:ahmzakif@gmail.com?subject=Hello&body=Hi, I would like to discuss..."
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmzakif.dev@gmail.com&su=From your website&body=Hi Ahmad, I would like to discuss ..."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 text-sm transition-colors duration-300"
                 >
-                  I&apos;ll get back to you as soon as possible!
+                  or start an email conversation
                 </a>
               </div>
             </motion.div>

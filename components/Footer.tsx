@@ -91,7 +91,7 @@ const Footer: React.FC<{}> = () => {
           variants={itemVariants}
         >
           <p className="text-gray-300 text-sm mb-4">
-            © 2024 | Developed
+            © 2025 | Developed
             <motion.span
               className="inline-block text-red-400"
               animate={{ scale: [1, 1.2, 1] }}
@@ -99,13 +99,9 @@ const Footer: React.FC<{}> = () => {
             >
             </motion.span>{" "}
             by{" "}
-                          <motion.a
-                href="mailto:ahmzakif@gmail.com"
-                className="text-transparent font-medium bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-              >
-                ahmzakif@gmail.com
-              </motion.a>
+              <span className="text-transparent font-medium bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">
+                ahmzakif
+              </span>
           </p>
           
           <div className="flex items-center justify-center gap-2 text-gray-400 text-sm">
