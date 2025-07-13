@@ -1,117 +1,219 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
+import { FolderOpen, ExternalLink, Github, Eye } from "lucide-react";
 
 const Projects: React.FC<{}> = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
+  const projectsData = [
+    {
+      title: "StayAwake",
+      description: "Android application for real-time monitoring of driver conditions such as fatigue and drowsiness using AI and computer vision.",
+      image: "/project/stayAwakeProject.png",
+      link: "https://youtu.be/nZXAyHOcGLk",
+      category: "AI/ML",
+      technologies: ["Android", "TensorFlow", "OpenCV", "Python"]
+    },
+    {
+      title: "Zona Farm",
+      description: "Image classification system to monitor chicken health, enhancing accuracy in poultry farming with machine learning.",
+      image: "/project/ZonaFarmProject.png",
+      link: "https://www.zonafarm.site/",
+      category: "AI/ML",
+      technologies: ["Python", "TensorFlow", "Image Classification", "Web App"]
+    },
+    {
+      title: "Gamaforce",
+      description: "Autopilot Systems for various UAV, Quadrotor, Fixedwing, and Hybrid VTOL Plane with advanced control algorithms.",
+      image: "/project/GamaforceProject.png",
+      link: "https://www.metrotvnews.com/play/b2lCren7-gamaforce-kembali-juara-umum-di-krti-2023",
+      category: "IoT/Robotics",
+      technologies: ["Arduino", "C++", "Control Systems", "UAV"]
+    },
+    {
+      title: "G-Connect",
+      description: "Early Warning System to detect landslides and floods in disaster-prone areas using IoT sensors and data analysis.",
+      image: "/project/GConnectProject.png",
+      link: "https://cloud.wg.ugm.ac.id/category/g-connect/",
+      category: "IoT",
+      technologies: ["IoT", "Sensors", "Data Analysis", "Web Dashboard"]
+    }
+  ];
+
   return (
-    <section id="projects">
-      <h2 className="text-white font-semibold text-center text-6xl pt-[35px]">
-        PROJECTS
-      </h2>
-      <p className=" tracking-[0.5em] text-center text-transparent font-light pb-5  bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500  text-1xl ">
-        EXPLORE NOW
-      </p>
-      <div className=" container mx-auto 2xl  ">
-        <div className="flex-col flex md:flex-row flex-wrap mt-7">
-          <Link
-            href="https://youtu.be/nZXAyHOcGLk"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="z-[1] sm:w-[50%]"
+    <motion.section 
+      id="projects"
+      className="min-h-screen flex flex-col justify-center px-4 sm:px-8 lg:px-20 py-20"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      {/* Header */}
+      <motion.div 
+        className="text-center mb-16"
+        variants={itemVariants}
+      >
+        <motion.div
+          className="flex items-center justify-center gap-3 mb-8"
+          variants={itemVariants}
+        >
+          <motion.div
+            className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
+            whileHover={{ rotate: 360 }}
+            transition={{ duration: 0.6 }}
           >
-            <div className="flex-row flex mb-5">
-              <Image
-                src="/project/stayAwakeProject.png"
-                height={99}
-                width={150}
-                alt="Ahmad Zaki Firdaus - AI Project"
-                className="rounded-lg h-[99px] w-[150px]"
-              />
-              <div className="p-3">
-                <p className="text-white font-semibold text-xl">StayAwake</p>
-                <p className="text-gray-500 text-[10px]">
-                  Developed android application for realtime monitoring of drivers conditions
-                  such as fatigue and drowsiness.
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="https://www.zonafarm.site/"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="z-[1] sm:w-[50%]"
+            <FolderOpen className="w-6 h-6 text-white" />
+          </motion.div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
+            PROJECTS
+          </h2>
+        </motion.div>
+        
+        <motion.div
+          className="flex items-center justify-center gap-2 mb-8"
+          variants={itemVariants}
+        >
+          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
+          <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 text-sm uppercase">
+            Explore Now
+          </p>
+          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
+        </motion.div>
+
+        <motion.p 
+          className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed"
+          variants={itemVariants}
+        >
+          A showcase of my innovative projects spanning AI/ML, IoT, and robotics, 
+          demonstrating practical applications of cutting-edge technology.
+        </motion.p>
+      </motion.div>
+
+      {/* Projects Grid */}
+      <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        {projectsData.map((project, index) => (
+          <motion.div
+            key={index}
+            variants={cardVariants}
+            whileHover={{ scale: 1.02, y: -5 }}
+            className="group"
           >
-            <div className="flex-row flex mb-5">
-              <Image
-                src="/project/ZonaFarmProject.png"
-                height={99}
-                width={150}
-                alt="Ahmad Zaki Firdaus - AI Project"
-                className="rounded-lg h-[99px] w-[150px]"
-              />
-              <div className="p-3">
-                <p className="text-white font-semibold text-xl">Zona Farm</p>
-                <p className="text-gray-500 text-[10px]">
-                Developed an image classification system to monitor 
-                chicken health, enhancing accuracy in poultry farming.
-                </p>
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div className="flex-col flex md:flex-row ">
-          <Link
-            href="https://www.metrotvnews.com/play/b2lCren7-gamaforce-kembali-juara-umum-di-krti-2023"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="z-[1] sm:w-[50%]"
-          >
-            <div className="flex-row flex mb-5">
-              <Image
-                src="/project/GamaforceProject.png"
-                height={99}
-                width={150}
-                alt="Ahmad Zaki Firdaus - IoT Project"
-                className="rounded-lg h-[99px] w-[150px]"
-              />
-              <div className=" p-3 ">
-                <p className="text-white font-semibold text-xl">
-                  Gamaforce
-                </p>
-                <p className="text-gray-500 text-[10px]">
-                Developed Autopilot Systems for various UAV, Quadrotor, 
-                Fixedwing, and Hybrid VTOL Plane.
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="https://cloud.wg.ugm.ac.id/category/g-connect/"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="z-[1] sm:w-[50%]"
-          >
-            <div className="flex-row flex mb-5">
-              <Image
-                src="/project/GConnectProject.png"
-                height={99}
-                width={150}
-                alt="Ahmad Zaki Firdaus - IoT Project"
-                className="rounded-lg h-[99px] w-[150px]"
-              />
-              <div className="p-3 ">
-                <p className="text-white font-semibold text-xl">G-Connect</p>
-                <p className="text-gray-500 text-[10px]">
-                Developed an Early Warning System to detect landslides 
-                and floods in disaster-prone areas.
-                </p>
-              </div>
-            </div>
-          </Link>
-        </div>
+            <Link
+              href={project.link}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="block"
+            >
+              <motion.div
+                className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 h-full"
+                whileHover={{ boxShadow: "0 20px 40px rgba(147, 51, 234, 0.2)" }}
+              >
+                {/* Image */}
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={project.image}
+                    height={250}
+                    width={400}
+                    alt={`${project.title} - Project`}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-4 right-4">
+                    <div className="bg-purple-500/80 backdrop-blur-sm rounded-full p-2">
+                      <ExternalLink className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4">
+                    <span className="bg-purple-500/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">
+                      {project.category}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+                  
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs px-2 py-1 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* View Project Button */}
+                  <div className="flex items-center gap-2 text-purple-400 text-sm font-medium group-hover:text-purple-300 transition-colors duration-300">
+                    <Eye className="w-4 h-4" />
+                    <span>View Project</span>
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
+          </motion.div>
+        ))}
       </div>
-    </section>
+
+      {/* Call to Action */}
+      <motion.div 
+        className="text-center mt-16"
+        variants={itemVariants}
+      >
+        <motion.div
+          className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8"
+          whileHover={{ scale: 1.01 }}
+        >
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Interested in Collaborating?
+          </h3>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            I&apos;m always open to discussing new opportunities and innovative projects. 
+            Let&apos;s create something amazing together!
+          </p>
+          <motion.button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Let&apos;s Talk
+          </motion.button>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 
