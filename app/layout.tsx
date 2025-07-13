@@ -12,21 +12,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ahmzakif.vercel.app/"),
-  title: "ahmzakif - Developer Portofolio",
+  title: "Kayzee - AI Developer Portfolio",
   description:
-    "AI Engineer & Developer from Indonesia with 2+ years of expertise. AI Engineer. Specializing image classification, object detection and IoT technologies.",
+    "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, Deep Learning and IoT technologies.",
   keywords: [
     "AI Engineer",
-    "Developer",
-    "Portfolio",
     "Developer Portfolio",
     "ahmzakif",
     "Ahmad Zaki Firdaus",
     "Zaki",
-    "Next.js",
-    "React",
-    "TensorFlow",
-    "PyTorch",
   ],
   icons: {
     icon: '/favicon.ico',
@@ -34,10 +28,10 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: "ahmzakif - Developer Portofolio",
+    title: "Kayzee - AI Developer Portfolio",
     description:
-      "AI Engineer & Developer from Indonesia with 2+ years of expertise. AI Engineer. Specializing image classification, object detection and IoT technologies.",
-    images: "/images/OpenGraph.png",
+      "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, Deep Learning and IoT technologies.",
+    // images: "/images/OpenGraph.png",
   },
   alternates: {
     canonical: "https://ahmzakif.vercel.app/",
