@@ -1,34 +1,42 @@
 import Navbar from "@/components/Navbar";
 import StarsCanvas from "@/components/main/StarsBackground";
+import AOSInitializer from "@/components/AOSInitializer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Link } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ahmzakif.vercel.app/"),
-  title: "Ahmad Zaki Firdaus - AI | ML | DL - Developer Portofolio",
+  title: "ahmzakif - Developer Portofolio",
   description:
-    "Developer Portfolio of Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
+    "AI Engineer & Developer from Indonesia with 2+ years of expertise. AI Engineer. Specializing image classification, object detection and IoT technologies.",
   keywords: [
+    "AI Engineer",
     "Developer",
     "Portfolio",
-    "Developer Portflio",
+    "Developer Portfolio",
+    "ahmzakif",
     "Ahmad Zaki Firdaus",
     "Zaki",
-    "ahmzakif",
     "Next.js",
     "React",
     "TensorFlow",
     "PyTorch",
   ],
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
   openGraph: {
-    title: "Ahmad Zaki Firdaus - AI | ML | DL - Developer Portofolio",
+    title: "ahmzakif - Developer Portofolio",
     description:
-      "AI & IoT Developer from Indonesia with 2+ years of expertise. AI Engineer. Specializing image classification, object detection and IoT technologies.",
+      "AI Engineer & Developer from Indonesia with 2+ years of expertise. AI Engineer. Specializing image classification, object detection and IoT technologies.",
     images: "/images/OpenGraph.png",
   },
   alternates: {
@@ -78,6 +86,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#111] overflow-y-scroll overflow-x-hidden`}
       >
+        <AOSInitializer />
         <SpeedInsights />
         <Analytics />
         <StarsCanvas />

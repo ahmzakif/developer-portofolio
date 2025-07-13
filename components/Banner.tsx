@@ -56,10 +56,8 @@ const Banner: React.FC<{}> = () => {
           className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           variants={itemVariants}
         >
-          Ahmad Zaki{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400">
-            Firdaus
-          </span>
+          Ahmad <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400">Zaki</span>{" "}
+          <span>Firdaus</span>
         </motion.h1>
 
         <motion.div 
@@ -73,10 +71,6 @@ const Banner: React.FC<{}> = () => {
               Chill
             </span>
           </p>
-          <motion.div
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
             <Image
               src="/icon/popcorn.gif"
               height={40}
@@ -84,7 +78,6 @@ const Banner: React.FC<{}> = () => {
               alt="Chill"
               className="rounded-full"
             />
-          </motion.div>
         </motion.div>
 
         <motion.p 

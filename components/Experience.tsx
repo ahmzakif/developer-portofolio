@@ -66,10 +66,11 @@ const Experience: React.FC<{}> = () => {
             className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.6 }}
+            data-aos="zoom-in"
           >
             <Briefcase className="w-6 h-6 text-white" />
           </motion.div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white" data-aos="zoom-in">
             EXPERIENCE
           </h2>
         </motion.div>
@@ -77,6 +78,8 @@ const Experience: React.FC<{}> = () => {
         <motion.div
           className="flex items-center justify-center gap-2 mb-8"
           variants={itemVariants}
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
         >
           <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
           <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 text-sm uppercase">
@@ -88,6 +91,8 @@ const Experience: React.FC<{}> = () => {
         <motion.p 
           className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed"
           variants={itemVariants}
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
         >
           My professional journey in AI and machine learning, working on innovative projects 
           that push the boundaries of technology and create real-world impact.

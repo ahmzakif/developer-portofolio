@@ -55,10 +55,11 @@ const About: React.FC<{}> = () => {
           <motion.div
             variants={iconVariants}
             className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
+            data-aos="zoom-in"
           >
             <User className="w-6 h-6 text-white" />
           </motion.div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white" data-aos="zoom-in">
             ABOUT ME
           </h1>
         </motion.div>
@@ -66,6 +67,8 @@ const About: React.FC<{}> = () => {
         <motion.div
           className="flex items-center gap-2 mb-12"
           variants={itemVariants}
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
         >
           <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
           <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 text-sm uppercase">
@@ -77,6 +80,8 @@ const About: React.FC<{}> = () => {
         <motion.div
           className="grid md:grid-cols-2 gap-8 mb-12"
           variants={itemVariants}
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
         >
           <motion.div
             className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300"
