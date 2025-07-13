@@ -22,6 +22,12 @@ import tailwind from '../public/skills/tailwind.svg';
 import tensorflow from '../public/skills/tensorflow.svg';
 import typescript from '../public/skills/typescript.svg';
 import yolo from '../public/skills/yolo.svg';
+import huggingface from '../public/skills/huggingface.svg';
+import langchain from '../public/skills/langchain.svg';
+import gemini from '../public/skills/gemini.svg';
+import openai from '../public/skills/openai.svg';
+import ollama from '../public/skills/ollama.svg';
+
 
 
 export const skillsImage = (skill: string): StaticImageData => {
@@ -74,6 +80,12 @@ export const skillsImage = (skill: string): StaticImageData => {
             return raspberrypi;
         case 'yolo':
             return yolo;
+        case 'huggingface':
+            return huggingface;
+        case 'langchain':
+            return langchain;
+        case 'gemini':
+            return gemini;
         default:
             throw new Error(`Skill image not found for: ${skill}`);
     }

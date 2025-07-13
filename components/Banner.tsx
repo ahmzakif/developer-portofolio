@@ -85,9 +85,9 @@ const Banner: React.FC<{}> = () => {
           className="text-base sm:text-lg text-gray-300 mb-8 max-w-[600px] leading-relaxed"
           variants={itemVariants}
         >
-          Passionate AI Engineer specializing in machine learning and deep learning, 
+          Passionate AI Engineer specializing in Generative AI and ML/DL, 
           focused on creating efficient, impactful AI solutions. I am also deeply 
-          interested in IoT, exploring how interconnected devices can enhance the way we live and work.
+          interested in Computer Vision, exploring how it can enhance the way we live and work.
         </motion.p>
 
         <motion.div 
