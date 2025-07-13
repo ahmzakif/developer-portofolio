@@ -97,7 +97,6 @@ const Footer: React.FC<{}> = () => {
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
             >
-              {/* <Heart className="w-4 h-4 inline" /> */}
             </motion.span>{" "}
             by{" "}
             <Link 

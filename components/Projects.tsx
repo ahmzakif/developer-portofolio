@@ -133,24 +133,32 @@ const Projects: React.FC<{}> = () => {
                 whileHover={{ boxShadow: "0 20px 40px rgba(147, 51, 234, 0.2)" }}
               >
                 {/* Image */}
-                <div className="relative overflow-hidden">
-                  <Image
-                    src={project.image}
-                    height={250}
-                    width={400}
-                    alt={`${project.title} - Project`}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-center justify-center bg-gradient-to-br from-purple-900/20 to-pink-900/20 p-8">
+                  <div className="relative w-32 h-32 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-500 flex items-center justify-center shadow-xl shadow-purple-900/30">
+                    {/* Kotak frame dengan gradient border */}
+                    <div className="w-full h-full rounded-xl overflow-hidden bg-black/20 flex items-center justify-center">
+                      <Image
+                        src={project.image}
+                        height={128}
+                        width={128}
+                        alt={`${project.title} - Project`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {/* Floating category badge */}
+                    <div className="absolute -top-2 -right-2">
+                      <span className="bg-purple-500/90 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full font-medium shadow-lg">
+                        {project.category}
+                      </span>
+                    </div>
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  {/* External link icon */}
                   <div className="absolute top-4 right-4">
-                    <div className="bg-purple-500/80 backdrop-blur-sm rounded-full p-2">
+                    <div className="bg-purple-500/80 backdrop-blur-sm rounded-full p-2 shadow-lg">
                       <ExternalLink className="w-4 h-4 text-white" />
                     </div>
-                  </div>
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-purple-500/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">
-                      {project.category}
-                    </span>
                   </div>
                 </div>
 
