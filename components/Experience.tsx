@@ -94,8 +94,7 @@ const Experience: React.FC<{}> = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          My professional journey in AI and machine learning, working on innovative projects 
-          that push the boundaries of technology and create real-world impact.
+          My professional journey as an AI Engineer is focused on Generative AI and Machine Learning, working on innovative projects that push the boundaries of what AI can create and deliver real-world impact.
         </motion.p>
       </motion.div>
 

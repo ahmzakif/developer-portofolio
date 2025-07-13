@@ -96,12 +96,12 @@ const Skilss = () => {
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center">
-              <Code className="w-5 h-5 text-blue-400" />
+              <Brain className="w-5 h-5 text-blue-400" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Frontend & Web</h3>
+            <h3 className="text-xl font-semibold text-white">Generative AI</h3>
           </div>
           <p className="text-gray-300 text-sm">
-            React, Next.js, TypeScript, Tailwind CSS, and modern web technologies
+            LLMs, VLMs, Transformers, Generative AI frameworks: e.g. HuggingFace, LangChain, OpenAI, Gemini, Ollama.
           </p>
         </motion.div>
 
@@ -112,12 +112,12 @@ const Skilss = () => {
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-              <Brain className="w-5 h-5 text-green-400" />
+              <Code className="w-5 h-5 text-green-400" />
             </div>
-            <h3 className="text-xl font-semibold text-white">AI & Machine Learning</h3>
+            <h3 className="text-xl font-semibold text-white">Machine/Deep Learning</h3>
           </div>
           <p className="text-gray-300 text-sm">
-            TensorFlow, PyTorch, OpenCV, YOLO, and computer vision technologies
+            TensorFlow, PyTorch, Computer Vision, Scikit-learn, Model Deployment.
           </p>
         </motion.div>
 
@@ -130,10 +130,10 @@ const Skilss = () => {
             <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
               <Zap className="w-5 h-5 text-purple-400" />
             </div>
-            <h3 className="text-xl font-semibold text-white">IoT & Hardware</h3>
+            <h3 className="text-xl font-semibold text-white">Web & Supporting Tech</h3>
           </div>
           <p className="text-gray-300 text-sm">
-            Arduino, Raspberry Pi, embedded systems, and IoT development
+            React, Next.js, TypeScript, Tailwind CSS, and supporting web technologies
           </p>
         </motion.div>
       </motion.div>

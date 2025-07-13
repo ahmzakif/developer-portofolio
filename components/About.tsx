@@ -91,12 +91,10 @@ const About: React.FC<{}> = () => {
               <div className="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center">
                 <Brain className="w-5 h-5 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white">AI Expertise</h3>
+              <h3 className="text-xl font-semibold text-white">Generative AI Engineer</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              As a passionate AI engineer, I thrive on the intricate balance between logic and innovation. 
-              Currently immersed in the dynamic field of artificial intelligence, my expertise lies in 
-              machine learning, object detection, and image classification.
+              As a dedicated AI Engineer, my primary focus is on <span className="text-purple-400 font-semibold">Generative AI</span>—from large language models (LLMs) to generative vision and creative AI systems. I specialize in building, fine-tuning, and deploying generative models that create text, images, and more, pushing the boundaries of what AI can generate and imagine.
             </p>
           </motion.div>
 
@@ -108,12 +106,10 @@ const About: React.FC<{}> = () => {
               <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
                 <Zap className="w-5 h-5 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Innovation Focus</h3>
+              <h3 className="text-xl font-semibold text-white">Innovation in AI</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              I seamlessly integrate cutting-edge technologies with impactful solutions. 
-              My journey involves translating concepts into robust machine learning models, 
-              advancing object detection and image classification systems.
+              I am passionate about leveraging the latest advancements in AI to solve real-world problems. My journey includes developing generative models, integrating them into products, and exploring creative applications of AI in various domains.
             </p>
           </motion.div>
         </motion.div>
@@ -127,12 +123,10 @@ const About: React.FC<{}> = () => {
             <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
               <Target className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white">IoT & Future Tech</h3>
+            <h3 className="text-2xl font-bold text-white">Generative AI & Future Vision</h3>
           </div>
           <p className="text-gray-300 leading-relaxed text-lg">
-            I am also deeply interested in IoT, exploring how interconnected devices can enhance 
-            intelligent systems. Constantly pushing the boundaries of innovation in AI and IoT, 
-            I navigate the ever-evolving landscape of artificial intelligence.
+            My mission is to advance the field of Generative AI, enabling machines to create, assist, and inspire. I am always exploring new frontiers in AI, from creative content generation to intelligent automation, and am committed to continuous learning and innovation in this rapidly evolving space.
           </p>
         </motion.div>
       </div>

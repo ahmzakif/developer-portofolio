@@ -132,8 +132,7 @@ export function Contact() {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          I&apos;m currently available to take on new projects. Feel free to reach out 
-          for collaborations, opportunities, or just to say hello!
+          I&apos;m currently available for collaboration, consultation, or discussion in Generative AI and Machine Learning. Feel free to reach out for opportunities, partnerships, or to explore the future of AI!
         </motion.p>
       </motion.div>
 
@@ -153,8 +152,7 @@ export function Contact() {
                 Let&apos;s talk
               </h3>
               <p className="text-gray-300 leading-relaxed mb-8">
-                I&apos;m always open to discussing new opportunities, innovative projects, 
-                creative ideas, or opportunities to be part of your visions.
+                I&apos;m always open to discussing new opportunities, innovative projects, or creative ideas in Generative AI and Machine Learning.
               </p>
               
               <div className="space-y-6">

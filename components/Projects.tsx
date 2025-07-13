@@ -113,8 +113,7 @@ const Projects: React.FC<{}> = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          A showcase of my innovative projects spanning AI/ML, IoT, and robotics, 
-          demonstrating practical applications of cutting-edge technology.
+          A showcase of my innovative projects in Generative AI, Machine Learning, and supporting technologies—demonstrating practical applications of cutting-edge artificial intelligence.
         </motion.p>
       </motion.div>
 
