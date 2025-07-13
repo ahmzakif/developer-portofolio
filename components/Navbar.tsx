@@ -100,13 +100,13 @@ const Navbar: React.FC = () => {
               <motion.a
                 href={item.href}
                 onClick={(e) => handleLinkClick(e, item.href.slice(1))}
-                className="relative block px-4 py-2 text-md text-white transition-colors duration-300 hover:text-purple-400 group"
+                className="relative block px-4 py-2 text-md text-white transition-colors duration-300 hover:text-blue-400 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item.label}
                 <motion.div
-                  className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"
+                  className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}
                 />
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
           <motion.a
             href="/#contact"
             onClick={(e) => handleLinkClick(e, "contact")}
-            className="group relative z-[1] bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full text-white py-2 px-6 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg overflow-hidden"
+            className="group relative z-[1] bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full text-white py-2 px-6 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -193,15 +193,15 @@ const Navbar: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
                 >
-                  <motion.a
-                    href={item.href}
-                    onClick={(e) => handleLinkClick(e, item.href.slice(1))}
-                    className="block px-4 py-3 text-white hover:text-purple-400 transition-colors duration-300 border-l-2 border-transparent hover:border-purple-500"
-                    whileHover={{ x: 10 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {item.label}
-                  </motion.a>
+                                  <motion.a
+                  href={item.href}
+                  onClick={(e) => handleLinkClick(e, item.href.slice(1))}
+                  className="block px-4 py-3 text-white hover:text-blue-400 transition-colors duration-300 border-l-2 border-transparent hover:border-blue-500"
+                  whileHover={{ x: 10 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item.label}
+                </motion.a>
                 </motion.li>
               ))}
               <motion.li
@@ -212,7 +212,7 @@ const Navbar: React.FC = () => {
                 <motion.a
                   href="/#contact"
                   onClick={(e) => handleLinkClick(e, "contact")}
-                  className="block px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-medium text-center"
+                  className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg text-white font-medium text-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

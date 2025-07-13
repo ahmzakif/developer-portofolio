@@ -45,9 +45,9 @@ const Banner: React.FC<{}> = () => {
             transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
             className="w-6 h-6"
           >
-            <Sparkles className="w-6 h-6 text-purple-500" />
+            <Sparkles className="w-6 h-6 text-blue-500" />
           </motion.div>
-          <span className="text-purple-400 text-sm font-medium tracking-wider">
+          <span className="text-blue-400 text-sm font-medium tracking-wider">
             AI ENGINEER & DEVELOPER
           </span>
         </motion.div>
@@ -56,7 +56,7 @@ const Banner: React.FC<{}> = () => {
           className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           variants={itemVariants}
         >
-          Ahmad <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400">Zaki</span>{" "}
+          Ahmad <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-500 to-green-400">Zaki</span>{" "}
           <span>Firdaus</span>
         </motion.h1>
 
@@ -67,7 +67,7 @@ const Banner: React.FC<{}> = () => {
           <Code className="w-6 h-6 text-blue-400" />
           <p className="text-xl sm:text-2xl font-medium text-gray-300">
             I do Code &{" "}
-            <span className="text-transparent font-semibold bg-clip-text bg-gradient-to-r from-purple-500 to-orange-400">
+            <span className="text-transparent font-semibold bg-clip-text bg-gradient-to-r from-blue-500 to-green-400">
               Chill
             </span>
           </p>
@@ -96,7 +96,7 @@ const Banner: React.FC<{}> = () => {
         >
           <motion.button
             onClick={() => window?.open('/docs/Ahmad_Zaki_Firdaus-Resume.pdf', '_blank')}
-            className="group relative z-[1] bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full text-white font-semibold py-4 px-8 border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden"
+            className="group relative z-[1] bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full text-white font-semibold py-4 px-8 border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -109,12 +109,12 @@ const Banner: React.FC<{}> = () => {
               </span>
             </div>
             <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 transition-opacity duration-300 blur-xl"
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 opacity-0 transition-opacity duration-300 blur-xl"
               animate={{
                 boxShadow: [
-                  "0 0 20px rgba(147, 51, 234, 0.3)",
-                  "0 0 40px rgba(147, 51, 234, 0.6)",
-                  "0 0 20px rgba(147, 51, 234, 0.3)",
+                  "0 0 20px rgba(59, 130, 246, 0.3)",
+                  "0 0 40px rgba(59, 130, 246, 0.6)",
+                  "0 0 20px rgba(59, 130, 246, 0.3)",
                 ],
               }}
               transition={{
@@ -127,7 +127,7 @@ const Banner: React.FC<{}> = () => {
 
           <motion.button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group relative z-[1] bg-transparent border-2 border-purple-500 hover:border-purple-400 rounded-full text-white font-semibold py-4 px-8 transition-all duration-300 transform hover:scale-105 overflow-hidden"
+            className="group relative z-[1] bg-transparent border-2 border-blue-500 hover:border-blue-400 rounded-full text-white font-semibold py-4 px-8 transition-all duration-300 transform hover:scale-105 overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -158,7 +158,7 @@ const Banner: React.FC<{}> = () => {
           }}
         >
           <motion.div
-            className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 opacity-20 blur-3xl"
+            className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 opacity-20 blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.2, 0.4, 0.2],
@@ -170,7 +170,7 @@ const Banner: React.FC<{}> = () => {
             }}
           />
           <motion.div
-            className="relative rounded-full overflow-hidden border-4 border-purple-500/30 shadow-2xl"
+            className="relative rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >

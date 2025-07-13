@@ -5,7 +5,7 @@ import { skillsData } from '@/utils/skills';
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
-import { Code, Zap, Brain } from "lucide-react";
+import { Code, Zap, Brain, Server } from "lucide-react";
 
 const Skilss = () => {
   const containerVariants = {
@@ -48,7 +48,7 @@ const Skilss = () => {
           variants={itemVariants}
         >
           <motion.div
-            className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
+            className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center"
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.6 }}
             data-aos="zoom-in"
@@ -66,11 +66,11 @@ const Skilss = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
-          <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 text-sm uppercase">
+          <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
+          <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 text-sm uppercase">
             Explore Now
           </p>
-          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
+          <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
         </motion.div>
 
         <motion.p 
@@ -90,50 +90,50 @@ const Skilss = () => {
         variants={itemVariants}
       >
         <motion.div
-          className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300"
+          className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300"
           variants={skillCardVariants}
           whileHover={{ scale: 1.02, y: -5 }}
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center">
-              <Brain className="w-5 h-5 text-blue-400" />
+              <Zap className="w-5 h-5 text-blue-400" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Generative AI</h3>
+            <h3 className="text-xl font-semibold text-white">Frontend Development</h3>
           </div>
-          <p className="text-gray-300 text-sm">
-            LLMs, VLMs, Transformers, Generative AI frameworks: e.g. HuggingFace, LangChain, OpenAI, Gemini, Ollama.
+          <p className="text-gray-300 leading-relaxed">
+            Modern web development with React, Next.js, TypeScript, and Tailwind CSS. Creating responsive, accessible, and performant user interfaces.
           </p>
         </motion.div>
 
         <motion.div
-          className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300"
+          className="bg-transparent/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300"
           variants={skillCardVariants}
           whileHover={{ scale: 1.02, y: -5 }}
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-              <Code className="w-5 h-5 text-green-400" />
+              <Server className="w-5 h-5 text-green-400" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Machine/Deep Learning</h3>
+            <h3 className="text-xl font-semibold text-white">Backend Development</h3>
           </div>
-          <p className="text-gray-300 text-sm">
-            TensorFlow, PyTorch, Computer Vision, Scikit-learn, Model Deployment.
+          <p className="text-gray-300 leading-relaxed">
+            Building robust APIs and server-side applications with Node.js, Python, and various databases. Focus on scalability and performance.
           </p>
         </motion.div>
 
         <motion.div
-          className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300"
+          className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300"
           variants={skillCardVariants}
           whileHover={{ scale: 1.02, y: -5 }}
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
-              <Zap className="w-5 h-5 text-purple-400" />
+            <div className="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center">
+              <Brain className="w-5 h-5 text-cyan-400" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Web & Supporting Tech</h3>
+            <h3 className="text-xl font-semibold text-white">AI & Machine Learning</h3>
           </div>
-          <p className="text-gray-300 text-sm">
-            React, Next.js, TypeScript, Tailwind CSS, and supporting web technologies
+          <p className="text-gray-300 leading-relaxed">
+            Deep expertise in generative AI, computer vision, and ML/DL frameworks. Building intelligent systems that can create and learn.
           </p>
         </motion.div>
       </motion.div>
@@ -161,11 +161,11 @@ const Skilss = () => {
             {skillsData.map((skill, id) => (
               <motion.div 
                 key={id}
-                className="w-36 min-w-fit h-fit flex flex-col items-center justify-center m-3 sm:m-5 rounded-xl group relative cursor-pointer bg-black/20 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+                className="w-36 min-w-fit h-fit flex flex-col items-center justify-center m-3 sm:m-5 rounded-xl group relative cursor-pointer bg-transparent backdrop-blur-0 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
                 whileHover={{ 
                   scale: 1.1, 
                   y: -10,
-                  boxShadow: "0 20px 40px rgba(147, 51, 234, 0.3)"
+                  boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)"
                 }}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -185,9 +185,9 @@ const Skilss = () => {
                       className="h-full w-auto rounded-lg group-hover:scale-110 transition-transform duration-300"
                     />
                   </motion.div>
-                  <p className="text-gray-300 text-sm font-medium text-center group-hover:text-purple-400 transition-colors duration-300">
-                    {skill}
-                  </p>
+                                  <p className="text-gray-300 text-sm font-medium text-center group-hover:text-blue-400 transition-colors duration-300">
+                  {skill}
+                </p>
                 </div>
               </motion.div>
             ))}
@@ -208,12 +208,12 @@ const Skilss = () => {
         ].map((stat, index) => (
           <motion.div
             key={index}
-            className="text-center p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl"
+            className="text-center p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 backdrop-blur-sm border border-blue-500/20 rounded-2xl"
             variants={skillCardVariants}
             whileHover={{ scale: 1.05 }}
           >
             <motion.div
-              className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 mb-2"
+              className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{ delay: index * 0.1, type: "spring", stiffness: 200 }}

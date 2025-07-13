@@ -101,7 +101,7 @@ export function Contact() {
           variants={itemVariants}
         >
           <motion.div
-            className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
+            className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center"
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.6 }}
             data-aos="zoom-in"
@@ -119,11 +119,11 @@ export function Contact() {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
-          <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 text-sm uppercase">
+          <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
+          <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 text-sm uppercase">
             Get In Touch
           </p>
-          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
+          <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
         </motion.div>
 
         <motion.p 
@@ -160,18 +160,18 @@ export function Contact() {
                   <motion.a
                     key={index}
                     href={info.link}
-                    className="flex items-center gap-4 p-4 bg-black/20 rounded-xl hover:bg-purple-500/10 hover:border-purple-500/30 border border-white/5 transition-all duration-300 group"
+                    className="flex items-center gap-4 p-4 bg-black/20 rounded-xl hover:bg-blue-500/10 hover:border-blue-500/30 border border-white/5 transition-all duration-300 group"
                     whileHover={{ x: 10 }}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <info.icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">{info.label}</p>
-                      <p className="text-white font-medium group-hover:text-purple-400 transition-colors duration-300">
+                      <p className="text-white font-medium group-hover:text-blue-400 transition-colors duration-300">
                         {info.value}
                       </p>
                     </div>
@@ -224,7 +224,7 @@ export function Contact() {
                       type="text"
                       name="name"
                       placeholder="Enter your name"
-                      className="w-full pl-10 pr-4 py-3 bg-black/20 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 transition-all duration-300"
+                      className="w-full pl-10 pr-4 py-3 bg-black/20 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 transition-all duration-300"
                       required
                     />
                   </div>
@@ -240,7 +240,7 @@ export function Contact() {
                       type="email"
                       name="email"
                       placeholder="Enter your email"
-                      className="w-full pl-10 pr-4 py-3 bg-black/20 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 transition-all duration-300"
+                      className="w-full pl-10 pr-4 py-3 bg-black/20 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 transition-all duration-300"
                       required
                     />
                   </div>
@@ -256,7 +256,7 @@ export function Contact() {
                       name="message"
                       placeholder="Enter your message"
                       rows={5}
-                      className="w-full pl-10 pr-4 py-3 bg-black/20 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 transition-all duration-300 resize-none"
+                      className="w-full pl-10 pr-4 py-3 bg-black/20 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 transition-all duration-300 resize-none"
                       required
                     />
                   </div>
@@ -265,7 +265,7 @@ export function Contact() {
                 <motion.button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -286,9 +286,9 @@ export function Contact() {
               <div className="mt-6 text-center">
                 <a
                   href="mailto:ahmzakif@gmail.com?subject=Hello&body=Hi, I would like to discuss..."
-                  className="text-purple-400 hover:text-purple-300 text-sm transition-colors duration-300"
+                  className="text-blue-400 hover:text-blue-300 text-sm transition-colors duration-300"
                 >
-                  or start an email conversation
+                  I&apos;ll get back to you as soon as possible!
                 </a>
               </div>
             </motion.div>

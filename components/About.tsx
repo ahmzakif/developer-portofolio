@@ -42,19 +42,19 @@ const About: React.FC<{}> = () => {
         animate={{ opacity: 0.1 }}
         transition={{ duration: 2 }}
       >
-        <div className="absolute top-20 left-10 w-32 h-32 border border-purple-500/30 rounded-full" />
-        <div className="absolute bottom-20 right-10 w-24 h-24 border border-pink-500/30 rounded-full" />
+        <div className="absolute top-20 left-10 w-32 h-32 border border-blue-500/30 rounded-full" />
+        <div className="absolute bottom-20 right-10 w-24 h-24 border border-green-500/30 rounded-full" />
         <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-500/30 rounded-full" />
       </motion.div>
 
       <div className="flex flex-col items-center max-w-4xl mx-auto relative z-10">
         <motion.div
-          className="flex items-center gap-3 mb-8"
+          className="flex items-center gap-3 mb-4"
           variants={itemVariants}
         >
           <motion.div
             variants={iconVariants}
-            className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
+            className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center"
             data-aos="zoom-in"
           >
             <User className="w-6 h-6 text-white" />
@@ -65,62 +65,73 @@ const About: React.FC<{}> = () => {
         </motion.div>
 
         <motion.div
-          className="flex items-center gap-2 mb-12"
+          className="flex items-center gap-2 mb-6"
           variants={itemVariants}
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
-          <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 text-sm uppercase">
+          <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
+          <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 text-sm uppercase">
             Explore Now
           </p>
-          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
+          <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
         </motion.div>
 
+        <motion.p 
+          className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed mb-12 text-center"
+          variants={itemVariants}
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
+          Passionate AI Engineer specializing in Generative AI and Machine Learning, 
+          focused on creating innovative solutions that bridge the gap between human creativity and artificial intelligence. 
+          I am deeply committed to advancing the field of AI while building practical, impactful applications.
+        </motion.p>
+
         <motion.div
-          className="grid md:grid-cols-2 gap-8 mb-12"
+          className="grid md:grid-cols-2 gap-8 mb-6"
           variants={itemVariants}
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
           <motion.div
-            className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300"
+            className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300"
             whileHover={{ scale: 1.02, y: -5 }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center">
-                <Brain className="w-5 h-5 text-blue-400" />
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center">
+                <Brain className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Generative AI Engineer</h3>
+              <h3 className="text-xl font-semibold text-white">AI & Machine Learning</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              As a dedicated AI Engineer, my primary focus is on <span className="text-purple-400 font-semibold">Generative AI</span>—from large language models (LLMs) to generative vision and creative AI systems. I specialize in building, fine-tuning, and deploying generative models that create text, images, and more, pushing the boundaries of what AI can generate and imagine.
+              As a dedicated AI Engineer, my primary focus is on <span className="text-blue-400 font-semibold">Generative AI</span>—from large language models (LLMs) to generative vision and creative AI systems. I specialize in building, fine-tuning, and deploying generative models that can create, assist, and inspire.
             </p>
           </motion.div>
 
           <motion.div
-            className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300"
+            className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300"
             whileHover={{ scale: 1.02, y: -5 }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-                <Zap className="w-5 h-5 text-green-400" />
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center">
+                <Zap className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Innovation in AI</h3>
+              <h3 className="text-xl font-semibold text-white">Full-Stack Development</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              I am passionate about leveraging the latest advancements in AI to solve real-world problems. My journey includes developing generative models, integrating them into products, and exploring creative applications of AI in various domains.
+              I build robust, scalable applications using modern technologies like React, Next.js, Node.js, and Python. My expertise spans from frontend user experiences to backend API development and database design.
             </p>
           </motion.div>
         </motion.div>
 
         <motion.div
-          className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8 text-center"
+          className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 text-center"
           variants={itemVariants}
           whileHover={{ scale: 1.01 }}
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center">
               <Target className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white">Generative AI & Future Vision</h3>

@@ -63,7 +63,7 @@ const Experience: React.FC<{}> = () => {
           variants={itemVariants}
         >
           <motion.div
-            className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
+            className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center"
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.6 }}
             data-aos="zoom-in"
@@ -81,11 +81,11 @@ const Experience: React.FC<{}> = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
-          <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 text-sm uppercase">
+          <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
+          <p className="tracking-[0.5em] text-transparent font-light bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 text-sm uppercase">
             Explore Now
           </p>
-          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
+          <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500" />
         </motion.div>
 
         <motion.p 
@@ -107,7 +107,7 @@ const Experience: React.FC<{}> = () => {
             variants={itemVariants}
           >
             <motion.div
-              className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300"
+              className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300"
               variants={cardVariants}
               whileHover={{ scale: 1.02, y: -5 }}
             >
@@ -115,7 +115,7 @@ const Experience: React.FC<{}> = () => {
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                 <div className="flex items-center gap-4 mb-4 lg:mb-0">
                   <motion.div
-                    className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center"
+                    className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                   >
@@ -131,7 +131,7 @@ const Experience: React.FC<{}> = () => {
                     <h3 className="text-2xl font-bold text-white mb-1">
                       {exp.position}
                     </h3>
-                    <p className="text-purple-400 font-semibold text-lg">
+                    <p className="text-blue-400 font-semibold text-lg">
                       {exp.company}
                     </p>
                   </div>
@@ -139,11 +139,11 @@ const Experience: React.FC<{}> = () => {
                 
                 <div className="flex flex-col sm:flex-row gap-4 text-gray-300">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-purple-400" />
+                    <Calendar className="w-4 h-4 text-blue-400" />
                     <span className="text-sm">{exp.period}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-purple-400" />
+                    <MapPin className="w-4 h-4 text-blue-400" />
                     <span className="text-sm">{exp.location}</span>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ const Experience: React.FC<{}> = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: descIndex * 0.1 }}
                     >
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
                       <p className="text-gray-300 leading-relaxed">{desc}</p>
                     </motion.div>
                   ))}
@@ -170,14 +170,14 @@ const Experience: React.FC<{}> = () => {
               {/* Technologies */}
               <div className="border-t border-white/10 pt-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Code className="w-5 h-5 text-purple-400" />
+                  <Code className="w-5 h-5 text-blue-400" />
                   <h4 className="text-white font-semibold">Technologies Used</h4>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {exp.technologies.map((tech, techIndex) => (
                     <motion.div
                       key={techIndex}
-                      className="bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-2 text-purple-300 text-sm font-medium hover:bg-purple-500/30 hover:border-purple-500/50 transition-all duration-300 cursor-pointer"
+                      className="bg-blue-500/20 border border-blue-500/30 rounded-full px-4 py-2 text-blue-300 text-sm font-medium hover:bg-blue-500/30 hover:border-blue-500/50 transition-all duration-300 cursor-pointer"
                       whileHover={{ scale: 1.05 }}
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -199,11 +199,11 @@ const Experience: React.FC<{}> = () => {
         variants={itemVariants}
       >
         <motion.div
-          className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8 text-center"
+          className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 text-center"
           whileHover={{ scale: 1.01 }}
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center">
               <Award className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white">Bangkit Academy Achievement</h3>

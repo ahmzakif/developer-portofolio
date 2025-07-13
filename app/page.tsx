@@ -36,7 +36,7 @@ export default function Home() {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, 100, 0],
             y: [0, -50, 0],
@@ -49,7 +49,7 @@ export default function Home() {
           }}
         />
         <motion.div
-          className="absolute top-40 right-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+          className="absolute top-40 right-20 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, -80, 0],
             y: [0, 60, 0],

@@ -38,8 +38,8 @@ const Footer: React.FC<{}> = () => {
     >
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-1/4 w-32 h-32 border border-purple-500/30 rounded-full" />
-        <div className="absolute bottom-0 right-1/4 w-24 h-24 border border-pink-500/30 rounded-full" />
+        <div className="absolute top-0 left-1/4 w-32 h-32 border border-blue-500/30 rounded-full" />
+        <div className="absolute bottom-0 right-1/4 w-24 h-24 border border-green-500/30 rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -62,7 +62,7 @@ const Footer: React.FC<{}> = () => {
                   href={social.link}
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="block p-3 bg-black/20 backdrop-blur-sm border border-white/10 rounded-full hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300 group"
+                  className="block p-3 bg-black/20 backdrop-blur-sm border border-white/10 rounded-full hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 group"
                 >
                   <Image
                     src={social.image}
@@ -82,7 +82,7 @@ const Footer: React.FC<{}> = () => {
           className="flex items-center justify-center mb-8"
           variants={itemVariants}
         >
-          <div className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
+          <div className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
         </motion.div>
 
         {/* Copyright */}
@@ -99,13 +99,13 @@ const Footer: React.FC<{}> = () => {
             >
             </motion.span>{" "}
             by{" "}
-            <Link 
-              target="_blank" 
-              href="https://www.linkedin.com/in/ahmzakif/"
-              className="text-transparent font-medium bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 transition-all duration-300"
-            >
-              ahmzakif
-            </Link>
+                          <motion.a
+                href="mailto:ahmzakif@gmail.com"
+                className="text-transparent font-medium bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+              >
+                ahmzakif@gmail.com
+              </motion.a>
           </p>
           
           <div className="flex items-center justify-center gap-2 text-gray-400 text-sm">
@@ -113,7 +113,7 @@ const Footer: React.FC<{}> = () => {
             <Link
               target="_blank"
               href="https://nextjs.org/"
-              className="inline-flex items-center gap-1 hover:text-purple-400 transition-colors duration-300"
+              className="inline-flex items-center gap-1 hover:text-blue-400 transition-colors duration-300"
             >
               <Image
                 src="/icon/nextwhite.svg"
@@ -133,7 +133,7 @@ const Footer: React.FC<{}> = () => {
         >
           <motion.button
             onClick={scrollToTop}
-            className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full text-white transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
+            className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full text-white transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
             whileHover={{ scale: 1.1, y: -3 }}
             whileTap={{ scale: 0.9 }}
           >
