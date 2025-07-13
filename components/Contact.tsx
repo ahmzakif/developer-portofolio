@@ -72,7 +72,7 @@ export function Contact() {
       icon: Phone,
       label: "Phone",
       value: "+62 821-2300-9494",
-      link: "tel:+6282123009494"
+      link: "https://wa.me/6282123009494"
     },
     {
       icon: MapPin,

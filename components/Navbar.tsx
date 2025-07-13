@@ -125,11 +125,15 @@ const Navbar: React.FC = () => {
           <motion.a
             href="/#contact"
             onClick={(e) => handleLinkClick(e, "contact")}
-            className="relative z-[1] bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full text-white py-2 px-6 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            className="group relative z-[1] bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full text-white py-2 px-6 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact
+            <span className="block group-hover:invisible transition-opacity duration-200">Contact</span>
+            <span className="hidden group-hover:flex absolute left-0 top-0 w-full h-full items-center animate-marquee-fast min-w-[200%] pointer-events-none">
+              <span className="whitespace-nowrap px-6 uppercase text-2xl font-bold">CONTACT ME</span>
+              <span className="whitespace-nowrap px-6 uppercase text-2xl font-bold">CONTACT ME</span>
+            </span>
           </motion.a>
         </motion.div>
 

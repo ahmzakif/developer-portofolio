@@ -78,3 +78,11 @@ html {
   opacity: 0;
   animation: slideOut 0.9s ease backwards;
 }
+
+@keyframes marquee-fast {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee-fast {
+  animation: marquee-fast 1.5s linear infinite;
+}

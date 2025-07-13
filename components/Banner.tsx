@@ -95,16 +95,20 @@ const Banner: React.FC<{}> = () => {
         >
           <motion.button
             onClick={() => window?.open('/docs/Ahmad_Zaki_Firdaus-Resume.pdf', '_blank')}
-            className="group relative z-[1] bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full text-white font-semibold py-4 px-8 border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            className="group relative z-[1] bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full text-white font-semibold py-4 px-8 border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="flex items-center gap-2">
-              <Download className="w-5 h-5" />
-              <span>Get Resume</span>
+            <div className="flex items-center gap-2 relative">
+              <Download className="w-5 h-5 group-hover:invisible transition-opacity duration-200" />
+              <span className="block group-hover:invisible transition-opacity duration-200">Get Resume</span>
+              <span className="hidden group-hover:flex absolute left-0 top-0 w-full h-full items-center animate-marquee-fast min-w-[200%] pointer-events-none">
+                <span className="whitespace-nowrap px-8 uppercase text-2xl font-bold">GET RESUME</span>
+                <span className="whitespace-nowrap px-8 uppercase text-2xl font-bold">GET RESUME</span>
+              </span>
             </div>
             <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 transition-opacity duration-300 blur-xl"
               animate={{
                 boxShadow: [
                   "0 0 20px rgba(147, 51, 234, 0.3)",
@@ -122,13 +126,17 @@ const Banner: React.FC<{}> = () => {
 
           <motion.button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group relative z-[1] bg-transparent border-2 border-purple-500 hover:border-purple-400 rounded-full text-white font-semibold py-4 px-8 transition-all duration-300 transform hover:scale-105"
+            className="group relative z-[1] bg-transparent border-2 border-purple-500 hover:border-purple-400 rounded-full text-white font-semibold py-4 px-8 transition-all duration-300 transform hover:scale-105 overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5" />
-              <span>Let&apos;s Talk</span>
+            <div className="flex items-center gap-2 relative">
+              <Zap className="w-5 h-5 group-hover:invisible transition-opacity duration-200" />
+              <span className="block group-hover:invisible transition-opacity duration-200">Let&apos;s Talk</span>
+              <span className="hidden group-hover:flex absolute left-0 top-0 w-full h-full items-center animate-marquee-fast min-w-[200%] pointer-events-none">
+                <span className="whitespace-nowrap px-8 uppercase text-2xl font-bold">LET&apos;S TALK</span>
+                <span className="whitespace-nowrap px-8 uppercase text-2xl font-bold">LET&apos;S TALK</span>
+              </span>
             </div>
           </motion.button>
         </motion.div>
