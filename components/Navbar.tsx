@@ -100,7 +100,7 @@ const Navbar: React.FC = () => {
               <motion.a
                 href={item.href}
                 onClick={(e) => handleLinkClick(e, item.href.slice(1))}
-                className="relative block px-4 py-2 text-sm text-white transition-colors duration-300 hover:text-purple-400 group"
+                className="relative block px-4 py-2 text-md text-white transition-colors duration-300 hover:text-purple-400 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
