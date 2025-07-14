@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skilss";
 import { motion } from "framer-motion";
+import Cursor from "@/components/Cursor";
 
 export default function Home() {
   const containerVariants = {
@@ -79,6 +80,7 @@ export default function Home() {
       </div>
 
       <div className="relative z-10 flex flex-col gap-20">
+        <Cursor />
         <motion.div variants={sectionVariants}>
           <Banner />
         </motion.div>
