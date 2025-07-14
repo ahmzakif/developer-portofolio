@@ -51,7 +51,7 @@ const Footer: React.FC<{}> = () => {
           <div className="flex gap-6">
             {Social_Icons.map((social, index) => (
               <motion.div
-                key={social.alt}
+                key={social.alt + '-' + index}
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}

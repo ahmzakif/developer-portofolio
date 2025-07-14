@@ -78,6 +78,7 @@ const Banner: React.FC<{}> = () => {
               alt="Chill"
               className="rounded-full"
               unoptimized
+              style={{ height: 'auto' }}
             />
         </motion.div>
 

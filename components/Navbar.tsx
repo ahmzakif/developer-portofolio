@@ -41,12 +41,11 @@ const Navbar: React.FC = () => {
     const element = document.getElementById(id);
     if (element) {
       const offsetTop = element.offsetTop;
-  
+      const navbarHeight = 65; // atau samakan dengan className h-[65px]
       window.scrollTo({
-        top: offsetTop,
+        top: offsetTop - navbarHeight,
         behavior: "smooth",
       });
-  
       setIsMenuOpen(false);
     }
   };
@@ -78,6 +77,7 @@ const Navbar: React.FC = () => {
             alt="Ahmad Zaki Firdaus - Developer"
             width={100}
             height={100}
+            priority
             sizes="100vw"
             className="w-auto h-auto"
           />
@@ -193,7 +193,7 @@ const Navbar: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
                 >
-                                  <motion.a
+                <motion.a
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href.slice(1))}
                   className="block px-4 py-3 text-white hover:text-blue-400 transition-colors duration-300 border-l-2 border-transparent hover:border-blue-500"
