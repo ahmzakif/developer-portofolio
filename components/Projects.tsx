@@ -199,8 +199,8 @@ const Projects: React.FC<{}> = () => {
         variants={itemVariants}
       >
         <motion.div
-          className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8"
-          whileHover={{ scale: 1.01 }}
+          className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300"
+          whileHover={{ scale: 1.02, y: -5 }}
         >
           <h3 className="text-2xl font-bold text-white mb-4">
             Interested in Collaborating?

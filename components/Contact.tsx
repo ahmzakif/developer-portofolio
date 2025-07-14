@@ -144,7 +144,7 @@ export function Contact() {
             variants={itemVariants}
           >
             <motion.div
-              className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+              className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300"
               variants={cardVariants}
               whileHover={{ scale: 1.02, y: -5 }}
             >

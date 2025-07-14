@@ -199,8 +199,8 @@ const Experience: React.FC<{}> = () => {
         variants={itemVariants}
       >
         <motion.div
-          className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 text-center"
-          whileHover={{ scale: 1.01 }}
+          className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 text-center hover:border-blue-500/50 transition-all duration-300"
+          whileHover={{ scale: 1.02, y: -5 }}
         >
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center">
