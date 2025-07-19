@@ -19,7 +19,10 @@ const Navbar: React.FC = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
-        setIsMenuOpen(false);
+        // Only close menu if user is actively scrolling (not programmatic scroll)
+        if (Math.abs(currentScrollY - lastScrollY) > 5) {
+          setIsMenuOpen(false);
+        }
       } else {
         setIsVisible(true);
       }
@@ -38,15 +41,30 @@ const Navbar: React.FC = () => {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
+    
     const element = document.getElementById(id);
+    
     if (element) {
       const offsetTop = element.offsetTop;
-      const navbarHeight = 65; // atau samakan dengan className h-[65px]
-      window.scrollTo({
-        top: offsetTop - navbarHeight,
-        behavior: "smooth",
-      });
-      setIsMenuOpen(false);
+      const navbarHeight = 65;
+      
+      // For mobile menu, use a different approach
+      if (isMenuOpen) {
+        // Close menu first, then scroll
+        setIsMenuOpen(false);
+        setTimeout(() => {
+          window.scrollTo({
+            top: offsetTop - navbarHeight,
+            behavior: "smooth",
+          });
+        }, 300);
+      } else {
+        // For desktop, scroll immediately
+        window.scrollTo({
+          top: offsetTop - navbarHeight,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
@@ -99,7 +117,11 @@ const Navbar: React.FC = () => {
             >
               <motion.a
                 href={item.href}
-                onClick={(e) => handleLinkClick(e, item.href.slice(1))}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  handleLinkClick(e, item.href.slice(1));
+                }}
                 className="relative block px-4 py-2 text-md text-white transition-colors duration-300 hover:text-blue-400 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -124,7 +146,11 @@ const Navbar: React.FC = () => {
         >
           <motion.a
             href="/#contact"
-            onClick={(e) => handleLinkClick(e, "contact")}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              handleLinkClick(e, "contact");
+            }}
             className="group relative z-[1] bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full text-white py-2 px-6 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -195,7 +221,10 @@ const Navbar: React.FC = () => {
                 >
                 <motion.a
                   href={item.href}
-                  onClick={(e) => handleLinkClick(e, item.href.slice(1))}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLinkClick(e, item.href.slice(1));
+                  }}
                   className="block px-4 py-3 text-white hover:text-blue-400 transition-colors duration-300 border-l-2 border-transparent hover:border-blue-500"
                   whileHover={{ x: 10 }}
                   whileTap={{ scale: 0.95 }}
@@ -211,7 +240,10 @@ const Navbar: React.FC = () => {
               >
                 <motion.a
                   href="/#contact"
-                  onClick={(e) => handleLinkClick(e, "contact")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLinkClick(e, "contact");
+                  }}
                   className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg text-white font-medium text-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
