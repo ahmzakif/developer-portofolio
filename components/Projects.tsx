@@ -65,8 +65,7 @@ const Projects: React.FC<{}> = () => {
 
   return (
     <motion.section 
-      id="projects"
-      className="min-h-screen flex flex-col justify-center px-4 sm:px-8 lg:px-20 py-20"
+      className="flex flex-col justify-center px-4 sm:px-8 lg:px-20 py-16"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -210,7 +209,7 @@ const Projects: React.FC<{}> = () => {
             Let&apos;s create something amazing together!
           </p>
           <motion.button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => window.location.href = '/contact'}
             className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

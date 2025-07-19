@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { Download, Sparkles, Code, Zap } from "lucide-react";
+import Link from "next/link";
 
 const Banner: React.FC<{}> = () => {
   const containerVariants = {
@@ -26,7 +27,7 @@ const Banner: React.FC<{}> = () => {
 
   return (
     <motion.div 
-      className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-20 mt-[100px] z-[20] min-h-screen"
+      className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-20 mt-[100px] z-[20] py-20"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -126,21 +127,22 @@ const Banner: React.FC<{}> = () => {
             />
           </motion.button>
 
-          <motion.button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          <motion.div
             className="group relative z-[1] bg-transparent border-2 border-blue-500 hover:border-blue-400 rounded-full text-white font-semibold py-4 px-8 transition-all duration-300 transform hover:scale-105 overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="flex items-center gap-2 relative">
-              <Zap className="w-5 h-5 group-hover:invisible transition-opacity duration-200" />
-              <span className="block group-hover:invisible transition-opacity duration-200">Let&apos;s Talk</span>
-              <span className="hidden group-hover:flex absolute left-0 top-0 w-full h-full items-center animate-marquee-fast min-w-[200%] pointer-events-none">
-                <span className="whitespace-nowrap px-8 uppercase text-2xl font-bold">LET&apos;S TALK</span>
-                <span className="whitespace-nowrap px-8 uppercase text-2xl font-bold">LET&apos;S TALK</span>
-              </span>
-            </div>
-          </motion.button>
+            <Link href="/contact">
+              <div className="flex items-center gap-2 relative">
+                <Zap className="w-5 h-5 group-hover:invisible transition-opacity duration-200" />
+                <span className="block group-hover:invisible transition-opacity duration-200">Let&apos;s Talk</span>
+                <span className="hidden group-hover:flex absolute left-0 top-0 w-full h-full items-center animate-marquee-fast min-w-[200%] pointer-events-none">
+                  <span className="whitespace-nowrap px-8 uppercase text-2xl font-bold">LET&apos;S TALK</span>
+                  <span className="whitespace-nowrap px-8 uppercase text-2xl font-bold">LET&apos;S TALK</span>
+                </span>
+              </div>
+            </Link>
+          </motion.div>
         </motion.div>
       </motion.div>
 

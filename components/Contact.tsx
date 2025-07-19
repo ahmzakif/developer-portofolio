@@ -84,8 +84,7 @@ export function Contact() {
 
   return (
     <motion.section 
-      id="contact" 
-      className="min-h-screen flex flex-col justify-center px-4 sm:px-8 lg:px-20 py-20"
+      className="flex flex-col justify-center px-4 sm:px-8 lg:px-20 py-16"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

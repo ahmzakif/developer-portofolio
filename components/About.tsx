@@ -28,8 +28,7 @@ const About: React.FC<{}> = () => {
 
   return (
     <motion.section
-      id="about"
-      className="flex flex-col items-center justify-center min-h-screen relative overflow-hidden px-4 sm:px-8 lg:px-20"
+      className="flex flex-col items-center justify-center px-4 sm:px-8 lg:px-20 py-16"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
