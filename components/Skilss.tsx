@@ -201,10 +201,9 @@ const Skilss = () => {
         variants={itemVariants}
       >
         {[
-          { number: "1.5+", label: "Years Experience" },
-          { number: "5+", label: "Projects Completed" },
-          { number: "15+", label: "Technologies" },
-          // { number: "100%", label: "Client Satisfaction" }
+          { number: "2+", label: "Years Experience" },
+          { number: "5+", label: "Real World Projects" },
+          { number: "25+", label: "Technologies" },
         ].map((stat, index) => (
           <motion.div
             key={index}
