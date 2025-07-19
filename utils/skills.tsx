@@ -1,25 +1,42 @@
 export const skillsData: string[] = [
+  // Programming Languages
   'Python',
+  'JavaScript',
+  'TypeScript',
+  'CPP',
   'Matlab',
-  'Numpy',
-  'Pandas',
+  
+  // AI & LLM Frameworks
+  'LangChain',
+  'Ollama',
+  'OpenAI',
+  'FastAPI',
+  
+  // Machine Learning Frameworks
   'ScikitLearn',
   'TensorFlow',
   'PyTorch',
   'Keras',
+  
+  // Computer Vision & Object Detection
   'OpenCV',
   'YOLO',
-  'CPP',
-  'Arduino',
-  'RaspberryPi',
-  'Git',
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
+  
+  // Web Development Frameworks
   'React',
   'NextJS',
   'NodeJS',
   'Tailwind',
+  
+  // Databases
   'MongoDB',
+  "PostgreSQL",
+  
+  // DevOps & Tools
+  'Docker',
+  'Git',
+  
+  // Hardware & IoT
+  'Arduino',
+  'RaspberryPi',
 ];

@@ -96,7 +96,7 @@ const Banner: React.FC<{}> = () => {
           variants={itemVariants}
         >
           <motion.button
-            onClick={() => window?.open('/docs/Ahmad_Zaki_Firdaus-Resume.pdf', '_blank')}
+            onClick={() => window?.open('/docs/Ahmad Zaki Firdaus - Resume.pdf', '_blank')}
             className="group relative z-[1] bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full text-white font-semibold py-4 px-8 border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
