@@ -3,7 +3,7 @@
 import Banner from "@/components/Banner";
 import { motion } from "framer-motion";
 import Cursor from "@/components/Cursor";
-import { User, Code, Briefcase, FolderOpen, MessageCircle, ArrowRight } from "lucide-react";
+import { User, Code, Briefcase, FolderOpen, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -51,13 +51,6 @@ export default function Home() {
       icon: FolderOpen,
       href: "/projects",
       color: "from-orange-600 to-red-600"
-    },
-    {
-      title: "CONTACT",
-      description: "Get in touch for collaborations, opportunities, or discussions",
-      icon: MessageCircle,
-      href: "/contact",
-      color: "from-indigo-600 to-blue-600"
     }
   ];
 
@@ -122,7 +115,7 @@ export default function Home() {
         {/* Navigation Cards */}
         <motion.div 
           variants={sectionVariants}
-          className="px-4 sm:px-8 lg:px-20 py-20"
+          className="px-4 sm:px-8 lg:px-20 py-32 mt-20"
         >
           <motion.div 
             className="text-center mb-16"
@@ -136,44 +129,44 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto justify-items-center">
             {navigationCards.map((card, index) => (
               <motion.div
                 key={index}
                 variants={sectionVariants}
                 whileHover={{ scale: 1.05, y: -10 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full max-w-sm"
+                className="w-full max-w-lg"
               >
                 <Link href={card.href} className="block">
                   <motion.div
-                    className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 h-full min-h-[280px] group flex flex-col"
+                    className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 h-full min-h-[240px] group flex flex-col"
                     whileHover={{ 
                       boxShadow: "0 20px 40px rgba(59, 130, 246, 0.2)",
                       borderColor: "rgba(59, 130, 246, 0.5)"
                     }}
                   >
-                    <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center justify-between mb-4">
                       <motion.div
-                        className={`w-12 h-12 bg-gradient-to-r ${card.color} rounded-full flex items-center justify-center`}
+                        className={`w-10 h-10 bg-gradient-to-r ${card.color} rounded-full flex items-center justify-center`}
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <card.icon className="w-6 h-6 text-white" />
+                        <card.icon className="w-5 h-5 text-white" />
                       </motion.div>
                       <motion.div
                         className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         initial={{ x: -10 }}
                         whileHover={{ x: 0 }}
                       >
-                        <ArrowRight className="w-5 h-5 text-blue-400" />
+                        <ArrowRight className="w-4 h-4 text-blue-400" />
                       </motion.div>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                       {card.title}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed flex-grow">
+                    <p className="text-gray-300 leading-relaxed flex-grow mb-2 text-sm">
                       {card.description}
                     </p>
                   </motion.div>
