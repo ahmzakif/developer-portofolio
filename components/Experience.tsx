@@ -29,18 +29,47 @@ const Experience: React.FC<{}> = () => {
 
   const experienceData = [
     {
+      company: "BPJS Kesehatan",
+      position: "AI Software Developer",
+      period: "May 2025 - Present",
+      location: "Central Jakarta, Indonesia",
+      logo: "/images/BPJS.png",
+      description: [
+        "Building an on-premise Anti-Fraud system powered by LLMs with end-to-end responsibilities",
+        "Achieved high-throughput document processing (1,000+ docs/hour) with parallel workers, cloud storage (S3) integration, and automated error handling",
+        "Developed multi-modal AI pipelines leveraging computer vision and LLMs for automated classification, extraction, and verification of 15+ medical document types",
+        "Built multi-stage automatic validation and verification systems ensuring 99%+ data integrity and regulatory compliance, reducing manual review by 80%",
+        "Engineered modular, scalable frontend architecture using Next.js, enabling seamless integration with backend services",
+        "Developed RESTful APIs using FastAPI with SQL Server integration, ensuring secure communication between frontend and backend systems"
+      ],
+      technologies: ["Python", "PyTorch", "LangChain", "Ollama", "OpenAI", "FastAPI", "SQL Server", "AWS", "Docker", "Next.js"]
+    },
+    {
+      company: "Universitas Gadjah Mada",
+      position: "AI Research Assistant",
+      period: "Mar 2025 - May 2025",
+      location: "Yogyakarta, Indonesia",
+      logo: "/images/UGM.png",
+      description: [
+        "Designed semantic segmentation framework using multi-modal data for cultural heritage preservation",
+        "Developed pixel-wise segmentation models to accurately segment Borobudur temple reliefs using UNet, SegNet, PSPNet, DeepLabV3+, and YOLO",
+        "Established comprehensive evaluation protocol incorporating segmentation quality and reconstruction metrics"
+      ],
+      technologies: ["Python", "PyTorch", "TensorFlow", "OpenCV"]
+    },
+    {
       company: "StayAwake",
       position: "ML Engineer",
       period: "Aug 2023 - Jan 2024",
       location: "Remote",
-      logo: "/images/Bangkit.svg",
+      logo: "/images/Bangkit.png",
       description: [
         "Led development of Android-based real-time driver monitoring application using Single Shot Detector (SSD) MobileNetV2",
         "Implemented driver distraction and fatigue detection system with deep learning and image processing",
         "Collaborated with cross-functional team of ML engineers, cloud computing engineers, and mobile developers",
         "Enhanced technical expertise in deep learning, computer vision, and team leadership"
       ],
-      technologies: ["Python", "TensorFlow", "PyTorch", "Object Detection", "OpenCV", "Android"]
+      technologies: ["Python", "TensorFlow", "PyTorch", "OpenCV"]
     }
   ];
 
