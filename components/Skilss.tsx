@@ -142,14 +142,10 @@ const Skilss = () => {
         className="w-full"
         variants={itemVariants}
       >
-        <div className="relative">
-          {/* Gradient overlays for smooth edges */}
-          <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-black to-transparent z-10" />
-          <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-black to-transparent z-10" />
-          
+        <div className="relative">          
           <Marquee
             gradient={false}
-            speed={60}
+            speed={100}
             pauseOnHover={true}
             pauseOnClick={true}
             delay={0}
@@ -196,7 +192,7 @@ const Skilss = () => {
 
       {/* Skills Stats */}
       <motion.div 
-        className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-16"
+        className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16"
         variants={itemVariants}
       >
         {[
