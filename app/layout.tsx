@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ahmzakif.vercel.app/"),
   title: "Kayzee - AI Developer Portfolio",
   description:
-    "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, Deep Learning and IoT technologies.",
+    "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, Machine Learning and IoT technologies.",
   keywords: [
     "AI Engineer",
     "Developer Portfolio",
