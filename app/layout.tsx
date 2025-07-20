@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kayzee - AI Developer Portfolio",
     description:
-      "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, Deep Learning and IoT technologies.",
-    // images: "/images/OpenGraph.png",
+      "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, Machine Learning and IoT technologies.",
+    images: "/images/OpenGraph.png",
   },
   alternates: {
     canonical: "https://ahmzakif.vercel.app/",
