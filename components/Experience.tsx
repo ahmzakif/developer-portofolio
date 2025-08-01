@@ -36,7 +36,7 @@ const Experience: React.FC<{}> = () => {
       logo: "/images/BPJS.png",
       description: [
         "Building an on-premise Anti-Fraud system powered by LLMs with end-to-end responsibilities",
-        "Achieved high-throughput document processing (1,000+ docs/hour) with parallel workers, cloud storage (S3) integration, and automated error handling",
+        "Achieved high-throughput document processing (1,000+ docs/hour) with parallel workers, S3 storage integration, and automated error handling",
         "Developed multi-modal AI pipelines leveraging computer vision and LLMs for automated classification, extraction, and verification of 15+ medical document types",
         "Built multi-stage automatic validation and verification systems ensuring 99%+ data integrity and regulatory compliance, reducing manual review by 80%",
         "Engineered modular, scalable frontend architecture using Next.js, enabling seamless integration with backend services",
