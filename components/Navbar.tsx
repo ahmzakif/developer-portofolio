@@ -172,7 +172,7 @@ const Navbar: React.FC = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <motion.ul 
-              className="py-6 px-4 space-y-4"
+              className="py-6 px-4 space-y-4 text-right"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.1 }}
@@ -180,13 +180,13 @@ const Navbar: React.FC = () => {
               {navItems.map((item, index) => (
                 <motion.li
                   key={item.href}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
                 >
                   <motion.div
-                    className="block px-4 py-3 text-white hover:text-blue-400 transition-colors duration-300 border-l-2 border-transparent hover:border-blue-500"
-                    whileHover={{ x: 10 }}
+                    className="block px-4 py-3 text-white hover:text-blue-400 transition-colors duration-300 border-r-2 border-transparent hover:border-blue-500"
+                    whileHover={{ x: -10 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <Link href={item.href} onClick={() => setIsMenuOpen(false)}>
@@ -196,7 +196,7 @@ const Navbar: React.FC = () => {
                 </motion.li>
               ))}
               <motion.li
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.5 }}
               >
