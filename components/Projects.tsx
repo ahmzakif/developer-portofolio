@@ -68,8 +68,7 @@ const Projects: React.FC<{}> = () => {
       className="flex flex-col justify-center px-4 sm:px-8 lg:px-20 py-16"
       variants={containerVariants}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      animate="visible"
     >
       {/* Header */}
       <motion.div 
