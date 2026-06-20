@@ -41,7 +41,7 @@ const Projects: React.FC<{}> = () => {
       title: "Zona Farm",
       description: "Image classification system to monitor chicken health, enhancing accuracy in poultry farming with machine learning.",
       image: "/project/ZonaFarmProject.png",
-      link: "https://www.zonafarm.site/",
+      link: "https://zonafarm.id/",
       category: "AI/ML",
       technologies: ["Python", "TensorFlow", "Image Classification", "Web App"]
     },

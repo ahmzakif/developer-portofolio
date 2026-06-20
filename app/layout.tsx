@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import AOSInitializer from "@/components/AOSInitializer";
 import Cursor from "@/components/Cursor";
+import Preloader from "@/components/Preloader";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
@@ -79,6 +80,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#111] overflow-y-scroll overflow-x-hidden`}
       >
+        <Preloader />
         <AOSInitializer />
         <SpeedInsights />
         <Analytics />
