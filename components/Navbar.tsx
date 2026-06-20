@@ -3,13 +3,15 @@
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, User, Code2, Briefcase, FolderOpen, ChevronRight, Mail } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -41,10 +43,10 @@ const Navbar: React.FC = () => {
   }, [handleScroll]);
 
   const navItems = [
-    { href: "/about", label: "ABOUT" },
-    { href: "/skills", label: "SKILLS" },
-    { href: "/experience", label: "EXPERIENCE" },
-    { href: "/projects", label: "PROJECTS" },
+    { href: "/about", label: "ABOUT", icon: User },
+    { href: "/skills", label: "SKILLS", icon: Code2 },
+    { href: "/experience", label: "EXPERIENCE", icon: Briefcase },
+    { href: "/projects", label: "PROJECTS", icon: FolderOpen },
   ];
 
   return (
@@ -165,50 +167,74 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-white/10"
+            className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-t border-white/10 shadow-2xl shadow-black/50 overflow-hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <motion.ul 
-              className="py-6 px-4 space-y-4 text-right"
+            <motion.ul
+              className="p-4 space-y-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
-              {navItems.map((item, index) => (
-                <motion.li
-                  key={item.href}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
-                >
-                  <motion.div
-                    className="block px-4 py-3 text-white hover:text-blue-400 transition-colors duration-300 border-r-2 border-transparent hover:border-blue-500"
-                    whileHover={{ x: -10 }}
-                    whileTap={{ scale: 0.95 }}
+              {navItems.map((item, index) => {
+                const Icon = item.icon;
+                const isActive = pathname === item.href;
+                return (
+                  <motion.li
+                    key={item.href}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: 0.1 + index * 0.08 }}
                   >
                     <Link href={item.href} onClick={() => setIsMenuOpen(false)}>
-                      {item.label}
+                      <motion.div
+                        className={`flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl border transition-all duration-300 ${
+                          isActive
+                            ? "bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-blue-500/50 text-white"
+                            : "bg-white/[0.03] border-white/5 text-gray-300 hover:bg-white/[0.07] hover:border-blue-500/30 hover:text-white"
+                        }`}
+                        whileTap={{ scale: 0.97 }}
+                      >
+                        <div className="flex items-center gap-3">
+                          <span
+                            className={`flex items-center justify-center w-9 h-9 rounded-lg ${
+                              isActive
+                                ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white"
+                                : "bg-white/5 text-blue-400"
+                            }`}
+                          >
+                            <Icon className="w-[18px] h-[18px]" />
+                          </span>
+                          <span className="text-sm font-medium tracking-wide">
+                            {item.label}
+                          </span>
+                        </div>
+                        <ChevronRight className="w-4 h-4 opacity-50" />
+                      </motion.div>
                     </Link>
-                  </motion.div>
-                </motion.li>
-              ))}
+                  </motion.li>
+                );
+              })}
+
               <motion.li
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.5 }}
+                transition={{ duration: 0.3, delay: 0.1 + navItems.length * 0.08 }}
+                className="pt-2"
               >
-                <motion.div
-                  className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg text-white font-medium text-center"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                    CONTACT
-                  </Link>
-                </motion.div>
+                <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                  <motion.div
+                    className="flex items-center justify-center gap-2 px-4 py-3.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl text-white font-semibold shadow-lg shadow-blue-900/40"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <Mail className="w-[18px] h-[18px]" />
+                    <span className="text-sm tracking-wide">CONTACT ME</span>
+                  </motion.div>
+                </Link>
               </motion.li>
             </motion.ul>
           </motion.div>
