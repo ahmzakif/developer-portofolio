@@ -1,20 +1,20 @@
 import Navbar from "@/components/Navbar";
 import StarsCanvas from "@/components/main/StarsBackground";
 import AOSInitializer from "@/components/AOSInitializer";
+import Cursor from "@/components/Cursor";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Link } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ahmzakif.vercel.app/"),
-  title: "Kayzee - AI Developer Portfolio",
+  title: "Kayzee - AI Engineer Portfolio",
   description:
-    "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, Machine Learning and IoT technologies.",
+    "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, AI Agents and Deep Learning.",
   keywords: [
     "AI Engineer",
     "Developer Portfolio",
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: "Kayzee - AI Developer Portfolio",
+    title: "Kayzee - AI Engineer Portfolio",
     description:
-      "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, Machine Learning and IoT technologies.",
+      "AI Engineer & Developer from Indonesia with 2 years of expertise. Specializing Generative AI, AI Agents and Deep Learning.",
     images: "/images/OpenGraph.png",
   },
   alternates: {
@@ -84,6 +84,7 @@ export default function RootLayout({
         <SpeedInsights />
         <Analytics />
         <StarsCanvas />
+        <Cursor />
         <Navbar />
         {children}
       </body>

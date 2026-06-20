@@ -29,9 +29,23 @@ const Experience: React.FC<{}> = () => {
 
   const experienceData = [
     {
+      company: "GDP Labs",
+      position: "AI Engineer",
+      period: "Mar 2025 - Present",
+      location: "South Jakarta, Indonesia",
+      logo: "/images/GDPLabs.png",
+      description: [
+        "Improved internal AI systems to enhance performance, scalability, and maintainability",
+        "Optimized end-to-end pipelines involving OCR, document classification, and SVLM-based extraction",
+        "Standardized evaluation workflows and configurations to improve flexibility and reliability",
+        "Continuously improved internal system and OCR model performance by keeping up with the latest advancements, benchmarking and fine-tuning lightweight OCR and SVLM models that maintain high accuracy"
+      ],
+      technologies: ["Python", "PyTorch", "LangChain", "OpenAI", "Ollama", "FastAPI", "Docker", "AWS"]
+    },
+    {
       company: "BPJS Kesehatan",
-      position: "AI Software Developer",
-      period: "May 2025 - Present",
+      position: "AI Engineer",
+      period: "Jun 2025 - Dec 2025",
       location: "Central Jakarta, Indonesia",
       logo: "/images/BPJS.png",
       description: [
@@ -42,7 +56,7 @@ const Experience: React.FC<{}> = () => {
         "Engineered modular, scalable frontend architecture using Next.js, enabling seamless integration with backend services",
         "Developed RESTful APIs using FastAPI with SQL Server integration, ensuring secure communication between frontend and backend systems"
       ],
-      technologies: ["Python", "PyTorch", "LangChain", "Ollama", "OpenAI", "FastAPI", "SQL Server", "AWS", "Docker", "Next.js"]
+      technologies: ["Python", "PyTorch", "LangChain", "Ollama", "OpenAI", "FastAPI", "SQL Server", "Docker", "Next.js"]
     },
     {
       company: "Universitas Gadjah Mada",
@@ -122,7 +136,7 @@ const Experience: React.FC<{}> = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          My professional journey as an AI Engineer is focused on Generative AI and Machine Learning, working on innovative projects that push the boundaries of what AI can create and deliver real-world impact.
+          My professional journey as an AI Engineer is focused on Generative AI and AI Agents, working on innovative projects that push the boundaries of what AI can create and deliver real-world impact.
         </motion.p>
       </motion.div>
 

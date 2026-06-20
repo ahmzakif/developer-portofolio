@@ -2,7 +2,6 @@
 
 import Banner from "@/components/Banner";
 import { motion } from "framer-motion";
-import Cursor from "@/components/Cursor";
 import { User, Code, Briefcase, FolderOpen, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -26,7 +25,7 @@ export default function Home() {
   const navigationCards = [
     {
       title: "ABOUT ME",
-      description: "Learn more about my background, passion, and expertise in AI & Machine Learning",
+      description: "Learn more about my background, passion, and expertise in AI",
       icon: User,
       href: "/about",
       color: "from-blue-600 to-cyan-600"
@@ -107,7 +106,6 @@ export default function Home() {
       </div>
 
       <div className="relative z-10">
-        <Cursor />
         <motion.div variants={sectionVariants}>
           <Banner />
         </motion.div>

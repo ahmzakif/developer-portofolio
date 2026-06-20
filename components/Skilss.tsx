@@ -180,7 +180,7 @@ const Skilss = () => {
                       className="h-full w-auto rounded-lg group-hover:scale-110 transition-transform duration-300"
                     />
                   </motion.div>
-                                  <p className="text-gray-300 text-sm font-medium text-center group-hover:text-blue-400 transition-colors duration-300">
+                    <p className="text-gray-300 text-sm font-medium text-center group-hover:text-blue-400 transition-colors duration-300">
                   {skill}
                 </p>
                 </div>

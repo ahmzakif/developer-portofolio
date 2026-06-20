@@ -5,7 +5,7 @@ export const Social_Icons = [
       alt: "Ahmad Zaki Firdaus - Social Media",
     },
     {
-      link: "https://www.instagram.com/ahmzakif/",
+      link: "https://www.instagram.com/kzfds_/",
       image: "/icon/Instagram.svg",
       alt: "Ahmad Zaki Firdaus - Social Media",
     },

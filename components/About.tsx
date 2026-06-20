@@ -82,7 +82,7 @@ const About: React.FC<{}> = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          Passionate AI Engineer specializing in Generative AI and Machine Learning, 
+          Passionate AI Engineer specializing in Generative AI and AI Agents, 
           focused on creating innovative solutions that bridge the gap between human creativity and artificial intelligence. 
           I am deeply committed to advancing the field of AI while building practical, impactful applications.
         </motion.p>

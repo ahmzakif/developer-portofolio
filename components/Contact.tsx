@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, MessageCircle, User, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageCircle, User, CheckCircle, Linkedin } from "lucide-react";
 
 export function Contact() {
   const form = useRef<HTMLFormElement>(null);
@@ -38,12 +38,14 @@ export function Contact() {
     
     if (form.current) {
       const formData = new FormData(form.current);
-      formData.append("access_key", "1c1075ab-5d45-4dd8-a5e0-583100cdd28a");
 
       try {
-        const response = await fetch("https://api.web3forms.com/submit", {
+        const response = await fetch("https://formspree.io/f/xnjkaanq", {
           method: "POST",
           body: formData,
+          headers: {
+            Accept: "application/json",
+          },
         });
 
         if (response.ok) {
@@ -65,8 +67,8 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "ahmzakif@gmail.com",
-      link: "https://mail.google.com/mail/?view=cm&fs=1&to=ahmzakif@gmail.com"
+      value: "ahmzakif.dev@gmail.com",
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=ahmzakif.dev@gmail.com"
     },
     {
       icon: Phone,
@@ -79,6 +81,12 @@ export function Contact() {
       label: "Location",
       value: "Jakarta, Indonesia",
       link: "https://maps.google.com/?q=South Jakarta,Indonesia"
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "linkedin.com/in/ahmzakif",
+      link: "https://linkedin.com/in/ahmzakif"
     }
   ];
 
@@ -131,19 +139,19 @@ export function Contact() {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          I&apos;m currently available for collaboration, consultation, or discussion in Generative AI and Machine Learning. Feel free to reach out for opportunities, partnerships, or to explore the future of AI!
+          I&apos;m currently available for collaboration, consultation, or discussion in Generative AI and AI Agents. Feel free to reach out for opportunities, partnerships, or to explore the future of AI!
         </motion.p>
       </motion.div>
 
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <motion.div 
-            className="space-y-8"
+          <motion.div
+            className="space-y-8 h-full"
             variants={itemVariants}
           >
             <motion.div
-              className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300"
+              className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 h-full flex flex-col"
               variants={cardVariants}
               whileHover={{ scale: 1.02, y: -5 }}
             >
@@ -151,10 +159,10 @@ export function Contact() {
                 Let&apos;s talk
               </h3>
               <p className="text-gray-300 leading-relaxed mb-8">
-                I&apos;m always open to discussing new opportunities, innovative projects, or creative ideas in Generative AI and Machine Learning.
+                I&apos;m always open to discussing new opportunities, innovative projects, or creative ideas in Generative AI and AI Agents.
               </p>
               
-              <div className="space-y-6">
+              <div className="space-y-6 flex flex-col justify-between flex-1">
                 {contactInfo.map((info, index) => (
                   <motion.a
                     key={index}

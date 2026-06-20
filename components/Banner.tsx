@@ -183,7 +183,7 @@ const Banner: React.FC<{}> = () => {
               height={300}
               width={300}
               alt="Ahmad Zaki Firdaus"
-              className="object-cover"
+              className="w-[300px] h-[300px] object-cover object-top"
             />
           </motion.div>
           
