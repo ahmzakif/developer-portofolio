@@ -27,7 +27,7 @@ const Banner: React.FC<{}> = () => {
 
   return (
     <motion.div 
-      className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-20 mt-[100px] z-[20] py-20"
+      className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-20 mt-[80px] lg:mt-[100px] z-[20] py-6 lg:py-20"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -93,12 +93,12 @@ const Banner: React.FC<{}> = () => {
         </motion.p>
 
         <motion.div 
-          className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          className="flex flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
           variants={itemVariants}
         >
           <motion.button
             onClick={() => window?.open('/docs/Ahmad Zaki Firdaus - Resume.pdf', '_blank')}
-            className="group relative z-[1] bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full text-white font-semibold py-4 px-8 border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden"
+            className="group relative z-[1] bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full text-white font-semibold py-3 px-5 sm:py-4 sm:px-8 border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -128,7 +128,7 @@ const Banner: React.FC<{}> = () => {
           </motion.button>
 
           <motion.div
-            className="group relative z-[1] bg-transparent border-2 border-blue-500 hover:border-blue-400 rounded-full text-white font-semibold py-4 px-8 transition-all duration-300 transform hover:scale-105 overflow-hidden"
+            className="group relative z-[1] bg-transparent border-2 border-blue-500 hover:border-blue-400 rounded-full text-white font-semibold py-3 px-5 sm:py-4 sm:px-8 transition-all duration-300 transform hover:scale-105 overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
