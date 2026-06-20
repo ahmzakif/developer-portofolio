@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import StarsCanvas from "@/components/main/StarsBackground";
 import AOSInitializer from "@/components/AOSInitializer";
 import Cursor from "@/components/Cursor";
 import { Analytics } from "@vercel/analytics/react";
@@ -83,7 +82,6 @@ export default function RootLayout({
         <AOSInitializer />
         <SpeedInsights />
         <Analytics />
-        <StarsCanvas />
         <Cursor />
         <Navbar />
         {children}
